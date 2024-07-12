@@ -1,0 +1,62 @@
+.navbar {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 83%;
+    height: 60px;
+    border-radius: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 3px 3px 0 #0000000F;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    margin-left: 10px;
+    font-size: var(--text-logo);
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    background-color: white;
+    border: none;
+}
+
+.button {
+    padding: 8px 16px;
+    background: none;
+    font-family: "DM Sans", sans-serif;
+    font-size: var(--text-sm);
+    color: var(--color-trunks);
+    line-height: 24px;
+    border: none;
+}
+
+.button:last-child {
+    color: var(--color-bulma);
+    border: 1px solid black;
+    border-radius: 20px; /* don't know */
+}
+
+/*
+  display for mobile (390px)
+  only "Contact us" button is shown
+ */
+@media only screen and (max-width: 390px) {
+    .button:not(:last-child) {
+        display: none;
+    }
+}
