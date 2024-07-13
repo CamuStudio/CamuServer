@@ -6,7 +6,6 @@ export default function NavBar() {
             <div className={styles.buttons}>
                 <button className={styles.button}>Lessons</button>
                 <button className={styles.button}>Blog</button>
-                <button className={styles.button}>Career</button>
                 <button className={styles.button}>Contact us</button>
             </div>
         </nav>

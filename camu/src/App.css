@@ -6,9 +6,13 @@
   background-color: #d9d9d9;
   --text-sm: 14px;
   --text-logo: 12px;
+  --color-logo: black;
+  --color-fill-text: white;
   --color-trunks: #595D62;
-  --color-bulma: black
+  --color-bulma: black;
+  --color-fill: #595959
 }
+
 
 @media only screen and (max-width: 390px){
 

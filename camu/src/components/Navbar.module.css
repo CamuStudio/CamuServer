@@ -18,8 +18,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    background-color: black;
+    color: var(--color-fill-text);
+    background-color: var(--color-logo);
     border-radius: 50%;
     margin-left: 10px;
     font-size: var(--text-logo);
@@ -37,17 +37,21 @@
 
 .button {
     padding: 8px 16px;
+    margin-left: 8px;
+    margin-right: 8px;
     background: none;
     font-family: "DM Sans", sans-serif;
     font-size: var(--text-sm);
+    font-weight: 500;
     color: var(--color-trunks);
     line-height: 24px;
     border: none;
 }
 
 .button:last-child {
-    color: var(--color-bulma);
-    border: 1px solid black;
+    margin-right: 0;
+    color: var(--color-fill-text);
+    background-color: var(--color-fill);
     border-radius: 20px; /* don't know */
 }
 
