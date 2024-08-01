@@ -4,13 +4,16 @@
 * {
   font-family: "Inter", sans-serif;
   background-color: #d9d9d9;
-  --text-sm: 14px;
+  --M3-label-large: 14px;
   --text-logo: 12px;
+}
+
+* {
   --color-logo: black;
   --color-fill-text: white;
-  --color-trunks: #595D62;
-  --color-bulma: black;
-  --color-fill: #595959
+  --color-fill: #595959;
+  --M3-sys-light-outline: #72777F;
+  --M3-sys-light-primary: #30628C
 }
 
 
