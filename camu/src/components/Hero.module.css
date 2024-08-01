@@ -1,0 +1,59 @@
+.hero {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.leftContainer {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 24px;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+}
+
+.title {
+    color: var(--M3-sys-light-on-surface);
+    font-size: 4em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 72px; /* 112.5% */
+
+}
+
+.subtitle {
+    color: var(--Shade-Color-700);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.5px;
+}
+
+.rightContainer {
+    display: flex;
+    width: 50%;
+}
+
+.rightContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*
+  display for mobile (390px)
+  only "Contact us" button is shown
+ */
+@media only screen and (max-width: 390px) {
+    .button:not(:last-child) {
+        display: none;
+    }
+}

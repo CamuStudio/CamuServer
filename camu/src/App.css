@@ -3,11 +3,50 @@
 
 * {
   font-family: "Inter", sans-serif;
-  background-color: #d9d9d9;
-  --text-sm: 14px;
+  --M3-label-large: 14px;
   --text-logo: 12px;
-  --color-trunks: #595D62;
-  --color-bulma: black
+}
+
+* {
+  --color-logo: black;
+  --M3-sys-light-on-primary: white;
+  --color-fill: #595959;
+  --M3-sys-light-outline: #72777F;
+  --M3-sys-light-primary: #30628C;
+  --M3-sys-light-on-surface: #181C20;
+  --Shade-Color-700: #6D7173;
+  --M3-key-colors-primary: #0997EB
+}
+
+.Wrapper {
+  position: relative;
+}
+
+.app {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.15)) drop-shadow(0px 11px 17.1px rgba(0, 82, 128, 0.08));
+}
+
+.background {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.background svg {
+  width: 100%;
+  height: auto;
 }
 
 @media only screen and (max-width: 390px){
