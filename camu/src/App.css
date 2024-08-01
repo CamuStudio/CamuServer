@@ -3,19 +3,30 @@
 
 * {
   font-family: "Inter", sans-serif;
-  background-color: #d9d9d9;
   --M3-label-large: 14px;
   --text-logo: 12px;
 }
 
 * {
   --color-logo: black;
-  --color-fill-text: white;
+  --M3-sys-light-on-primary: white;
   --color-fill: #595959;
   --M3-sys-light-outline: #72777F;
-  --M3-sys-light-primary: #30628C
+  --M3-sys-light-primary: #30628C;
+  --M3-sys-light-on-surface: #181C20;
+  --Shade-Color-700: #6D7173;
+  --M3-key-colors-primary: #0997EB
 }
 
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  background:linear-gradient(225deg, #FAF5E9 -10.6%, #DFECFA 62.92%);
+  filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.15)) drop-shadow(0px 11px 17.1px rgba(0, 82, 128, 0.08));
+}
 
 @media only screen and (max-width: 390px){
 
