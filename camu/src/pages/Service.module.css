@@ -9,24 +9,6 @@
     gap: var(--Size-Space---320, 32px);
 }
 
-.titleContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    align-items: center;
-    color: var(--M3-sys-light-on-surface, #181C20);
-    text-align: center;
-}
-
-.title {
-    color: var(--M3-sys-light-on-surface, #181C20);
-    text-align: center;
-    font-size: 2em;
-    font-weight: 700;
-    line-height: 40px; /* 125% */
-    padding: 0;
-}
-
 .subtitle {
     color: var(--M3-sys-light-on-surface-variant);
     text-align: center;
