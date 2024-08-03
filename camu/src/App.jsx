@@ -1,6 +1,7 @@
 import './App.css'
 import NavBar from "./components/Navbar.jsx";
-import Hero from "./components/Hero.jsx";
+import Hero from "./pages/Hero.jsx";
+import Service from "./pages/Service.jsx";
 
 function App() {
 
@@ -46,6 +47,7 @@ function App() {
                   </defs>
               </svg>
           </div>
+          <Service/>
       </div>
   )
 }

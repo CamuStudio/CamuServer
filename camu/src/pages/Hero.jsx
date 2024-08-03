@@ -1,12 +1,12 @@
 import styles from './Hero.module.css'
-import Button from "./Button.jsx";
+import Button from "../components/Button.jsx";
 
 /**
  * The hero component containing text, contact button, and a hero image
  */
 export default function Hero() {
     return (
-        <main className={styles.hero}>
+        <main className={styles.container}>
             <section className={styles.leftContainer}>
                 <div className={styles.textContainer}>
                     <h1 className={styles.title}>Curate your own creative career</h1>
@@ -16,7 +16,7 @@ export default function Hero() {
                 <Button text={'Contact us'}/>
             </section>
             <section className={styles.rightContainer}>
-                <img src='../../public/hero.png' alt='hero'/>
+                <img src='/public/hero.png' alt='hero'/>
             </section>
         </main>
     )
