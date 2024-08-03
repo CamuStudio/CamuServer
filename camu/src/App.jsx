@@ -6,7 +6,7 @@ import Service from "./pages/Service.jsx";
 function App() {
 
   return (
-      <div className="Wrapper">
+      <div className="wrapper">
           <div className='app'>
               <NavBar/>
               <Hero/>

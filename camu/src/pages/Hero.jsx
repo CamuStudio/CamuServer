@@ -13,7 +13,7 @@ export default function Hero() {
                     <p className={styles.subtitle}>{`Let's become close friends as we move 
                 forward together, not just teacher and student working toward a goal.`}</p>
                 </div>
-                <Button text={'Contact us'}/>
+                <Button text={'Contact us'} className='solidButton'/>
             </section>
             <section className={styles.rightContainer}>
                 <img src='/public/hero.png' alt='hero'/>

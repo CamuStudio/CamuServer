@@ -7,6 +7,9 @@
   --text-logo: 12px;
 }
 
+/**
+  Color variables
+ */
 * {
   --color-logo: black;
   --M3-sys-light-on-primary: white;
@@ -16,10 +19,29 @@
   --M3-sys-light-surface: #F7F9FF;
   --M3-sys-light-on-surface: #181C20;
   --Shade-Color-700: #6D7173;
-  --M3-key-colors-primary: #0997EB
+  --M3-key-colors-primary: #0997EB;
+  --M3-sys-light-on-surface-variant: #42474E;
+  --M3-sys-light-surface-container-highest: #FCFCFF;
+  --M3-sys-light-on-secondary-container: #001F27;
+  --Schemes-Surface: #F7F9FF;
 }
 
-.Wrapper {
+/**
+  Spacing variables (gap, padding...)
+ */
+* {
+  --Section-Padding-Large: 120px;
+  --Size-Space---320: 32px;
+}
+
+/**
+  Corner radius variables
+ */
+* {
+  --Corner-radius-Small: 12px;
+}
+
+.wrapper {
   position: relative;
 }
 

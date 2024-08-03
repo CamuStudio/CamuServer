@@ -4,7 +4,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 10%
+    padding-top: var(--Section-Padding-Large);
+    padding-bottom: var(--Section-Padding-Large);
+    gap: var(--Size-Space---320, 32px);
 }
 
 .titleContainer {
@@ -12,8 +14,69 @@
     flex-direction: column;
     gap: 0.5em;
     align-items: center;
+    color: var(--M3-sys-light-on-surface, #181C20);
+    text-align: center;
+}
+
+.title {
+    color: var(--M3-sys-light-on-surface, #181C20);
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 40px; /* 125% */
+    padding: 0;
+}
+
+.subtitle {
+    color: var(--M3-sys-light-on-surface-variant);
+    text-align: center;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.5px;
 }
 
 .cardsContainer {
+    width: 80%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.cardsContainer > * > * {
+    display: flex;
+    padding: 24px;
+    align-items: flex-end;
+    gap: 13px;
+    border-radius: var(--Corner-radius-Small, 12px);
+    box-shadow: 2px 4px 11px 0 rgba(45, 49, 53, 0.08);
+    background: var(--M3-sys-light-surface-container-highest, #FCFCFF);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.upperContainer, .lowerContainer {
+    width: 100%;
+    display: flex;
+    gap: 2em;
+}
+
+.evaluationCardContainer {
+    width: calc(47% - 16px);
+    background-image: url("/public/portfolio_evaluation.svg");
+}
+
+.touringCardContainer {
+    width: calc(53% - 16px);
+    background-image: url("/public/portfolio_touring.svg");
+}
+
+.lessonsCardContainer {
+    width: calc(53% - 16px);
+    background-image: url("/public/lessons.svg");
+}
+
+.blogCardContainer {
+    width: calc(47% - 16px);
+    background-image: url("/public/blog.svg");
 }

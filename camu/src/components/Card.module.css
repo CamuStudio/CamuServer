@@ -3,3 +3,34 @@
     border: none;
 }
 
+.leftContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /*align-items: flex-start;*/
+    gap: 16px;
+}
+
+.textContainer {
+    text-wrap: wrap;
+    padding-top: 30%
+}
+
+.blankSection {
+    display: flex;
+    width: 21%;
+}
+
+.title {
+    color: var(--M3-sys-light-on-secondary-container, #001F27);
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 36px; /* 128.571% */
+}
+
+.subtitle {
+    color: var(--M3-sys-light-on-surface-variant, #42474E);
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.5px;
+    word-wrap: break-word;
+}
