@@ -1,13 +1,13 @@
 .navbar {
     background-color: transparent;
-    position: sticky;
-    z-index: 99;
+    position: fixed;
+    z-index: 10000;
     top: 0;
+    width: 82%;
     left: 9%;
     margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
-    width: 82%;
     height: 60px;
     border-radius: 99px;
     display: flex;
