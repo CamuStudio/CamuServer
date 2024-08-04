@@ -38,6 +38,14 @@
     letter-spacing: 0.1px;
 }
 
+.solidButton:hover {
+    cursor: pointer;
+}
+
+.hollowButton:hover {
+    cursor: pointer;
+}
+
 .contents {
     display: flex;
     justify-content: center;
