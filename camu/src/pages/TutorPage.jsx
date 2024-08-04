@@ -1,5 +1,37 @@
 import styles from './TutorPage.module.css'
 import SectionTitle from "../components/SectionTitle.jsx";
+import TutorGrid from "../components/tutorPage/TutorGrid.jsx";
+
+const tutors = [
+    {
+        imgSrc: '../src/assets/tutors/tutor1.png',
+        subject: 'Generative design',
+        avatarSrc: '../src/assets/tutors/tina.png',
+        name: 'Tina.W',
+        qualification: 'Graduate from Upenn'
+    },
+    {
+        imgSrc: '../src/assets/tutors/tutor2.png',
+        subject: 'Generative design',
+        avatarSrc: '../src/assets/tutors/andy.png',
+        name: 'Andy C.',
+        qualification: 'Work at HJS'
+    },
+    {
+        imgSrc: '../src/assets/tutors/tutor3.png',
+        subject: 'Generative design',
+        avatarSrc: '../src/assets/tutors/steve.png',
+        name: 'Steve J.',
+        qualification: 'Work at Apple'
+    },
+    {
+        imgSrc: '../src/assets/tutors/tutor4.png',
+        subject: 'Generative design',
+        avatarSrc: '../src/assets/tutors/lawrence.png',
+        name: 'Laurence L.',
+        qualification: 'Graduate from USC'
+    },
+]
 
 /**
  * The hero component containing text, contact button, and a hero image
@@ -11,22 +43,9 @@ export default function TutorPage() {
                           subtitle='All teachers have architectural backgrounds and advanced studies in multiple fields'
             />
             <section className={styles.tutorGridContainer}>
-                <section className={styles.tutorGrid}>
-                    <section className={styles.imageContainer}>
-                        <img className={styles.image} src='/public/tutor1.png' alt='tutor1'/>
-                        <img className={styles.unselectedIcon} src='/public/unselected-icon.svg' alt='unselected-icon' />
-                    </section>
-                    <section className={styles.description}>
-                    <h6 className={styles.subject}>Generative design</h6>
-                        <div className={styles.nameCard}>
-                            <img src='/public/tina.png' alt='tina'/>
-                            <div className={styles.textContainer}>
-                                <p className={styles.name}>Tina W.</p>
-                                <p className={styles.qualification}>Graduate from Upenn</p>
-                            </div>
-                        </div>
-                    </section>
-                </section>
+                {tutors.map((tutor) => (
+                    <TutorGrid key={tutor.imgSrc} tutor={tutor} />
+                ))}
             </section>
         </div>
     )
