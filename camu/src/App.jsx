@@ -1,7 +1,8 @@
 import './App.css'
 import NavBar from "./components/Navbar.jsx";
-import Hero from "./pages/Hero.jsx";
-import Service from "./pages/Service.jsx";
+import HeroPage from "./pages/HeroPage.jsx";
+import ServicePage from "./pages/ServicePage.jsx";
+import StrengthPage from "./pages/StrengthPage.jsx";
 
 function App() {
 
@@ -9,7 +10,7 @@ function App() {
       <div className="wrapper">
           <NavBar/>
           <div className='app'>
-              <Hero/>
+              <HeroPage/>
           </div>
           <div className='background'>
               <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="709" viewBox="0 0 1440 709" fill="none">
@@ -50,7 +51,8 @@ function App() {
                   </defs>
               </svg>
           </div>
-          <Service/>
+          <ServicePage/>
+          <StrengthPage />
       </div>
   )
 }

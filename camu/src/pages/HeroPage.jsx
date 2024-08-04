@@ -1,10 +1,10 @@
-import styles from './Hero.module.css'
+import styles from './HeroPage.module.css'
 import Button from "../components/Button.jsx";
 
 /**
  * The hero component containing text, contact button, and a hero image
  */
-export default function Hero() {
+export default function HeroPage() {
     return (
         <main className={styles.container}>
             <section className={styles.leftContainer}>

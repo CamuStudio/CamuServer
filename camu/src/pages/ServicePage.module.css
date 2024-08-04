@@ -6,7 +6,7 @@
     align-items: center;
     padding-top: var(--Section-Padding-Large);
     padding-bottom: var(--Section-Padding-Large);
-    gap: var(--Size-Space---320, 32px);
+    gap: var(--Spacing---Size-Space---320, 32px);
 }
 
 .subtitle {
