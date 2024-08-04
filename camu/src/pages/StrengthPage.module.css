@@ -3,8 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: var(--Section-Padding-Large);
-    padding-bottom: var(--Section-Padding-Large);
+    padding-top: var(--Spacing---Section-Padding-Large);
+    padding-bottom: var(--Spacing---Section-Padding-Large);
     gap: var(--Spacing---Size-Space---320, 32px);
 }
 
