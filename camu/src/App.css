@@ -35,7 +35,6 @@
  */
 * {
   --Section-Padding-Large: 120px;
-
   --Spacing---Size-Space---0: 0;
   --Spacing---Size-Space---120: 12px;
   --Spacing---Size-Space---160: 16px;
@@ -52,10 +51,10 @@
 
 .wrapper {
   position: relative;
+  background-color: #F5F7FA;
 }
 
 .app {
-  /*background-color: #F5F7FA;*/
   position: absolute;
   width: 100%;
   height: auto;
