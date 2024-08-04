@@ -3,6 +3,7 @@ import NavBar from "./components/Navbar.jsx";
 import HeroPage from "./pages/HeroPage.jsx";
 import ServicePage from "./pages/ServicePage.jsx";
 import StrengthPage from "./pages/StrengthPage.jsx";
+import TutorPage from "./pages/TutorPage.jsx";
 
 function App() {
 
@@ -53,6 +54,7 @@ function App() {
           </div>
           <ServicePage/>
           <StrengthPage />
+          <TutorPage />
       </div>
   )
 }

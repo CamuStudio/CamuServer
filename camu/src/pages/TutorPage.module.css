@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: var(--Spacing---Section-Padding-Large);
+    padding-bottom: var(--Spacing---Section-Padding-Large);
+    gap: var(--Spacing---Size-Space---320, 32px);
+}
+
+.tutorGridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: var(--Spacing---Size-Space---160, 16px);
+    grid-row-gap: var(--Spacing---Size-Space---640, 64px);
+}

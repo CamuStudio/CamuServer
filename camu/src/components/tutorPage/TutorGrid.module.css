@@ -1,0 +1,105 @@
+.tutorGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    flex: 1 0 0;
+}
+
+.imageContainer, .blankContainer {
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    height: calc(85% - 8px);
+}
+
+.blankContainer {
+    display: flex;
+    width: 100%;
+    height: 85%;
+    background: linear-gradient(0deg, rgba(48, 98, 140, 0.16)0%, rgba(48, 98, 140, 0.16)100%), var(--Main-goten, #FFF);
+}
+
+.moreTutors {
+    display: flex;
+    padding: 10px 16px 10px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.moreTutorInfo {
+    color: var(--M3-sys-light-primary, #30628C);
+    text-align: center;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.1px;
+}
+
+.image {
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    transition: transform .5s ease-out;
+}
+
+.image:hover {
+    transform: scale(1.05);
+}
+
+.unselectedIcon {
+    z-index: 1000;
+    position: absolute;
+    padding: 8px;
+    right: 8px;
+    bottom: 8px;
+    border-radius: var(--Spacing---Section-Padding-Medium, 100px);
+    background: var(--M3-sys-light-surface-container-highest, #FCFCFF);
+}
+
+.description {
+    display: flex;
+    width: 222.5px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--Spacing---Size-Space---120, 12px);
+}
+
+.subject {
+    color: var(--M3-sys-light-on-surface, #181C20);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px; /* 140% */
+}
+
+.nameCard {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+}
+
+.textContainer {
+    display: flex;
+    width: 158.5px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.name {
+    color: var(--M3-sys-light-on-surface, #181C20);
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.5px;
+}
+
+.qualification {
+    color: var(--M3-sys-light-on-surface-variant, #42474E);
+    font-size: 14px;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.25px;
+}
