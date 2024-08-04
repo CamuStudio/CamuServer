@@ -33,7 +33,7 @@ export default function ServicePage() {
                               buttonText='View ->'
                         >
                             <Button text={'View'} className='hollowButton'>
-                                <img src='/public/arrow_forward.svg' alt='arrow_forward' />
+                                <img src='/src/assets/general/arrow_forward.svg' alt='arrow_forward' />
                             </Button>
                         </Card>
                     </div>
@@ -43,7 +43,7 @@ export default function ServicePage() {
                               buttonText='View ->'
                         >
                             <Button text={'View'} className='hollowButton'>
-                                <img src='/public/arrow_forward.svg' alt='arrow_forward' />
+                                <img src='/src/assets/general/arrow_forward.svg' alt='arrow_forward' />
                             </Button>
                         </Card>
                     </div>

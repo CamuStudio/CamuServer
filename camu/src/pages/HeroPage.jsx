@@ -16,7 +16,7 @@ export default function HeroPage() {
                 <Button text={'Contact us'} className='solidButton'/>
             </section>
             <section className={styles.rightContainer}>
-                <img src='/public/hero.png' alt='hero'/>
+                <img src='/src/assets/hero/hero.png' alt='hero'/>
             </section>
         </main>
     )

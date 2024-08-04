@@ -14,7 +14,7 @@ export default function StrengthPage() {
             <section className={styles.cardsContainer}>
                 <div className={styles.portfolioCardContainer}>
                     <section className={styles.imageContainer}>
-                        <img src='/public/portfolio_and_research.svg' alt="Portfolio & Research" />
+                        <img src='/src/assets/strengths/portfolio_and_research.svg' alt="Portfolio & Research" />
                     </section>
                     <section className={styles.textContainer}>
                         <h6 className={styles.title}>Portfolio & Research</h6>
@@ -23,7 +23,7 @@ export default function StrengthPage() {
                 </div>
                 <div className={styles.applicationCardContainer}>
                     <section className={styles.imageContainer}>
-                        <img src='/application_and_career.svg' alt="Application & Career"/>
+                        <img src='/src/assets/strengths/application_and_career.svg' alt="Application & Career"/>
                     </section>
                     <section className={styles.textContainer}>
                         <h6 className={styles.title}>Application & Career</h6>
