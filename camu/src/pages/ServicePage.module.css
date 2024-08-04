@@ -6,25 +6,7 @@
     align-items: center;
     padding-top: var(--Section-Padding-Large);
     padding-bottom: var(--Section-Padding-Large);
-    gap: var(--Size-Space---320, 32px);
-}
-
-.titleContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    align-items: center;
-    color: var(--M3-sys-light-on-surface, #181C20);
-    text-align: center;
-}
-
-.title {
-    color: var(--M3-sys-light-on-surface, #181C20);
-    text-align: center;
-    font-size: 2em;
-    font-weight: 700;
-    line-height: 40px; /* 125% */
-    padding: 0;
+    gap: var(--Spacing---Size-Space---320, 32px);
 }
 
 .subtitle {
@@ -49,7 +31,6 @@
     align-items: flex-end;
     gap: 13px;
     border-radius: var(--Corner-radius-Small, 12px);
-    box-shadow: 2px 4px 11px 0 rgba(45, 49, 53, 0.08);
     background: var(--M3-sys-light-surface-container-highest, #FCFCFF);
     background-repeat: no-repeat;
     background-position: right;

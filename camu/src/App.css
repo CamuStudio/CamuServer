@@ -12,6 +12,7 @@
  */
 * {
   --color-logo: black;
+  --M3-ref-tertiary-tertiary95: #FFEFD1;
   --M3-sys-light-on-primary: white;
   --color-fill: #595959;
   --M3-sys-light-outline: #72777F;
@@ -24,6 +25,9 @@
   --M3-sys-light-surface-container-highest: #FCFCFF;
   --M3-sys-light-on-secondary-container: #001F27;
   --Schemes-Surface: #F7F9FF;
+  --Schemes-Tertiary-Container: #FFDF96;
+  --Schemes-Secondary-Container: #B4EBFF;
+  --M3-ref-secondary-secondary95: #DCF5FF;
 }
 
 /**
@@ -31,7 +35,12 @@
  */
 * {
   --Section-Padding-Large: 120px;
-  --Size-Space---320: 32px;
+
+  --Spacing---Size-Space---0: 0;
+  --Spacing---Size-Space---120: 12px;
+  --Spacing---Size-Space---160: 16px;
+  --Spacing---Size-Space---240: 24px;
+  --Spacing---Size-Space---320: 32px;
 }
 
 /**
@@ -46,6 +55,7 @@
 }
 
 .app {
+  /*background-color: #F5F7FA;*/
   position: absolute;
   width: 100%;
   height: auto;

@@ -1,14 +1,12 @@
-import styles from './Service.module.css';
+import styles from './ServicePage.module.css';
 import Card from "../components/Card.jsx";
 import Button from "../components/Button.jsx";
+import SectionTitle from "../components/SectionTitle.jsx";
 
-export default function Service() {
+export default function ServicePage() {
     return (
         <div className={styles.container}>
-            <section className={styles.titleContainer}>
-                <h3 className={styles.title}>Our services</h3>
-                <p className={styles.subtitle}>Using architecture as a springboard, pursue diversified development</p>
-            </section>
+            <SectionTitle title='Our Services' subtitle='Using architecture as a springboard, pursue diversified development'/>
             <section className={styles.cardsContainer}>
                 <section className={styles.upperContainer}>
                     <div className={styles.evaluationCardContainer}>

@@ -1,15 +1,16 @@
 import './App.css'
 import NavBar from "./components/Navbar.jsx";
-import Hero from "./pages/Hero.jsx";
-import Service from "./pages/Service.jsx";
+import HeroPage from "./pages/HeroPage.jsx";
+import ServicePage from "./pages/ServicePage.jsx";
+import StrengthPage from "./pages/StrengthPage.jsx";
 
 function App() {
 
   return (
       <div className="wrapper">
+          <NavBar/>
           <div className='app'>
-              <NavBar/>
-              <Hero/>
+              <HeroPage/>
           </div>
           <div className='background'>
               <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="709" viewBox="0 0 1440 709" fill="none">
@@ -34,12 +35,15 @@ function App() {
                                          result="hardAlpha"/>
                           <feOffset dy="11"/>
                           <feGaussianBlur stdDeviation="8.55"/>
-                          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.319743 0 0 0 0 0.5 0 0 0 0.08 0"/>
+                          <feColorMatrix type="matrix"
+                                         values="0 0 0 0 0 0 0 0 0 0.319743 0 0 0 0 0.5 0 0 0 0.08 0"/>
                           <feBlend mode="normal" in2="effect1_dropShadow_840_10750"
                                    result="effect2_dropShadow_840_10750"/>
-                          <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_840_10750" result="shape"/>
+                          <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_840_10750"
+                                   result="shape"/>
                       </filter>
-                      <linearGradient id="paint0_linear_840_10750" x1="-1116.5" y1="856.504" x2="-331.6" y2="-826.601"
+                      <linearGradient id="paint0_linear_840_10750" x1="-1116.5" y1="856.504" x2="-331.6"
+                                      y2="-826.601"
                                       gradientUnits="userSpaceOnUse">
                           <stop offset="0.270115" stopColor="#FAF5E9"/>
                           <stop offset="0.75517" stopColor="#DFECFA"/>
@@ -47,7 +51,8 @@ function App() {
                   </defs>
               </svg>
           </div>
-          <Service/>
+          <ServicePage/>
+          <StrengthPage />
       </div>
   )
 }

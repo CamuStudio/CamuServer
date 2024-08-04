@@ -1,0 +1,76 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: var(--Section-Padding-Large);
+    padding-bottom: var(--Section-Padding-Large);
+    gap: var(--Spacing---Size-Space---320, 32px);
+}
+
+.cardsContainer {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.portfolioCardContainer, .applicationCardContainer {
+    display: flex;
+    /*height: 480px;*/
+    padding: var(--Spacing---Size-Space---240);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--Spacing---Size-Space---320);
+    border-radius: var(--Corner-radius-Small);
+}
+
+.portfolioCardContainer {
+    background: var(--Schemes-Secondary-Container);
+}
+
+.portfolioCardContainer .textContainer {
+    background: var(--M3-ref-secondary-secondary95, #DCF5FF);
+}
+
+.applicationCardContainer {
+    background: var(--Schemes-Tertiary-Container);
+}
+
+.applicationCardContainer .textContainer {
+    background: var(--M3-ref-tertiary-tertiary95);
+}
+
+.imageContainer {
+    display: flex;
+}
+
+.textContainer {
+    color: var(--M3-sys-light-on-secondary-container);
+    display: flex;
+    padding: var(--Spacing---Size-Space---120, 12px) var(--Spacing---Size-Space---240, 24px) var(--Spacing---Size-Space---120, 12px) var(--Spacing---Size-Space---160, 16px);
+    flex-direction: column;
+    gap: var(--Spacing---Size-Space---0, 0px);
+    align-self: stretch;
+    border-radius: var(--Corner-radius-Small, 12px);
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px; /* 140% */
+}
+
+.subtitle {
+    font-size: 16px;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.5px;
+}
+
+.buttonContainer {
+    display: flex;
+    width: 30%;
+    justify-content: center;
+}
