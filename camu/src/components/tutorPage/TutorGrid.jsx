@@ -13,7 +13,7 @@ export default function TutorGrid({tutor, blank=false}) {
             <section className={tutor === {} ? styles.imageContainer : styles['blankContainer']}>
                 {blank ? (
                     <div className={styles.moreTutors}>
-                        <img src='../../assets/general/arrow_forward.svg' alt='arrow_forward'/>
+                        <img src='src/assets/general/arrow_forward.svg' alt='arrow_forward'/>
                         <span className={styles.moreTutorInfo}>View more tutors</span>
                     </div>
                 ) : (
@@ -27,7 +27,8 @@ export default function TutorGrid({tutor, blank=false}) {
                 }
             </section>
             <section className={styles.description}>
-                {tutor !== {} ?
+                {blank ?
+                    null :
                     <>
                         <h6 className={styles.subject}>{subject}</h6>
                         <div className={styles.nameCard}>
@@ -37,7 +38,7 @@ export default function TutorGrid({tutor, blank=false}) {
                                 <p className={styles.qualification}>{qualification}</p>
                             </div>
                         </div>
-                    </> : null
+                    </>
                 }
             </section>
         </section>
