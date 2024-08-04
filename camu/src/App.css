@@ -12,22 +12,23 @@
  */
 * {
   --color-logo: black;
-  --M3-ref-tertiary-tertiary95: #FFEFD1;
-  --M3-sys-light-on-primary: white;
   --color-fill: #595959;
+  --M3-key-colors-primary: #0997EB;
+  --M3-ref-secondary-secondary95: #DCF5FF;
+  --M3-ref-tertiary-tertiary95: #FFEFD1;
   --M3-sys-light-outline: #72777F;
   --M3-sys-light-primary: #30628C;
   --M3-sys-light-surface: #F7F9FF;
+  --M3-sys-light-on-primary: white;
   --M3-sys-light-on-surface: #181C20;
-  --Shade-Color-700: #6D7173;
-  --M3-key-colors-primary: #0997EB;
+  --M3-sys-light-on-secondary-container: #001F27;
   --M3-sys-light-on-surface-variant: #42474E;
   --M3-sys-light-surface-container-highest: #FCFCFF;
-  --M3-sys-light-on-secondary-container: #001F27;
+  --Main-goten: white;
   --Schemes-Surface: #F7F9FF;
-  --Schemes-Tertiary-Container: #FFDF96;
   --Schemes-Secondary-Container: #B4EBFF;
-  --M3-ref-secondary-secondary95: #DCF5FF;
+  --Schemes-Tertiary-Container: #FFDF96;
+  --Shade-Color-700: #6D7173;
 }
 
 /**
