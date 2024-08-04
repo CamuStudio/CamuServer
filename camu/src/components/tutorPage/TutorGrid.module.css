@@ -11,12 +11,34 @@
     overflow: hidden;
     position: relative;
     padding: 0;
+    height: calc(85% - 8px);
 }
 
 .blankContainer {
+    display: flex;
     width: 100%;
-    height: 100%;
+    height: 85%;
     background: linear-gradient(0deg, rgba(48, 98, 140, 0.16)0%, rgba(48, 98, 140, 0.16)100%), var(--Main-goten, #FFF);
+}
+
+.moreTutors {
+    display: flex;
+    padding: 10px 16px 10px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.moreTutorInfo {
+    color: var(--M3-sys-light-primary, #30628C);
+    text-align: center;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.1px;
 }
 
 .image {

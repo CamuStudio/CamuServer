@@ -46,7 +46,7 @@ export default function TutorPage() {
                 {tutors.map((tutor) => (
                     <TutorGrid key={tutor.imgSrc} tutor={tutor} />
                 ))}
-                <TutorGrid/>
+                <TutorGrid blank={true} tutor={{}} />
             </section>
         </div>
     )
