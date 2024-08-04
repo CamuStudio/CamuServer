@@ -1,7 +1,7 @@
 import styles from './ServicePage.module.css';
-import Card from "../components/Card.jsx";
-import Button from "../components/Button.jsx";
-import SectionTitle from "../components/SectionTitle.jsx";
+import Card from "../components/general/Card.jsx";
+import Button from "../components/general/Button.jsx";
+import SectionTitle from "../components/general/SectionTitle.jsx";
 
 export default function ServicePage() {
     return (

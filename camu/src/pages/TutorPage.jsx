@@ -1,5 +1,5 @@
 import styles from './TutorPage.module.css'
-import SectionTitle from "../components/SectionTitle.jsx";
+import SectionTitle from "../components/general/SectionTitle.jsx";
 import TutorGrid from "../components/tutorPage/TutorGrid.jsx";
 
 const tutors = [
