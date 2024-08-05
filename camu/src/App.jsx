@@ -4,6 +4,7 @@ import HeroPage from "./pages/HeroPage.jsx";
 import ServicePage from "./pages/ServicePage.jsx";
 import StrengthPage from "./pages/StrengthPage.jsx";
 import TutorPage from "./pages/TutorPage.jsx";
+import FAQPage from "./pages/FAQ/FAQPage.jsx";
 
 function App() {
 
@@ -55,6 +56,7 @@ function App() {
           <ServicePage/>
           <StrengthPage />
           <TutorPage />
+          <FAQPage />
       </div>
   )
 }
