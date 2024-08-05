@@ -5,6 +5,7 @@ main {
     justify-content: center;
     align-items: center;
     align-self: stretch;
+    background-color: var(--Schemes-Surface);
 }
 
 .container {
@@ -21,37 +22,4 @@ main {
     align-items: flex-start;
     gap: 16px;
     flex-shrink: 0;
-}
-
-.qAndAContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.questionContainer {
-    display: flex;
-    width: 736px;
-    height: var(--Spacing---Size-Space---480, 48px);
-    justify-content: space-between;
-    align-items: center;
-}
-
-.question {
-    color: var(--M3-sys-light-on-surface, #181C20);
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 28px; /* 140% */
-}
-
-.answer {
-    color: var(--M3-sys-light-on-surface-variant, #42474E);
-    font-size: 18px;
-    line-height: 28px; /* 155.556% */
-    letter-spacing: 1.08px;
-}
-
-.answer strong {
-    color: var(--M3-sys-light-on-surface-variant, #42474E);
-    font-weight: 700;
 }
