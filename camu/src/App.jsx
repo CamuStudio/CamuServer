@@ -5,6 +5,7 @@ import ServicePage from "./pages/Service/ServicePage.jsx";
 import StrengthPage from "./pages/Strength/StrengthPage.jsx";
 import TutorPage from "./pages/Tutor/TutorPage.jsx";
 import FAQPage from "./pages/FAQ/FAQPage.jsx";
+import ContactPage from "./pages/Contact/ContactPage.jsx";
 
 function App() {
 
@@ -57,6 +58,7 @@ function App() {
           <StrengthPage />
           <TutorPage />
           <FAQPage />
+          <ContactPage />
       </div>
   )
 }
