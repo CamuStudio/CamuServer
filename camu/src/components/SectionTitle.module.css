@@ -1,10 +1,16 @@
-.titleContainer {
+.centerAlignTitleContainer {
     display: flex;
     flex-direction: column;
     gap: 0.5em;
     align-items: center;
     color: var(--M3-sys-light-on-surface, #181C20);
     text-align: center;
+}
+
+.leftAlignTitleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .title {
