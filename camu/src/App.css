@@ -38,6 +38,7 @@
   --Spacing---Section-Padding-Medium: 100px;
   --Spacing---Section-Padding-Large: 120px;
   --Spacing---Size-Space---0: 0;
+  --Spacing---Size-Space---40: 4px;
   --Spacing---Size-Space---120: 12px;
   --Spacing---Size-Space---160: 16px;
   --Spacing---Size-Space---240: 24px;
@@ -51,6 +52,7 @@
  */
 * {
   --Corner-radius-Small: 12px;
+  --Corner-radius-Large: 32px;
 }
 
 .wrapper {

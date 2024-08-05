@@ -18,9 +18,9 @@
 
 .hollowButton {
     display: flex;
-    height: 40px;
-    min-width: 120px;
-    width: 30%;
+    height: 48px;
+    min-width: 160px;
+    /*width: 30%;*/
     flex-direction: column;
     justify-content: center;
     align-items: center;
