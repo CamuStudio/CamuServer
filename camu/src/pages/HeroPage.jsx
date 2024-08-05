@@ -1,5 +1,5 @@
 import styles from './HeroPage.module.css'
-import Button from "../components/Button.jsx";
+import Button from "../components/general/Button.jsx";
 
 /**
  * The hero component containing text, contact button, and a hero image

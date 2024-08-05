@@ -1,5 +1,5 @@
 import './App.css'
-import NavBar from "./components/Navbar.jsx";
+import NavBar from "./components/navbar/Navbar.jsx";
 import HeroPage from "./pages/HeroPage.jsx";
 import ServicePage from "./pages/ServicePage.jsx";
 import StrengthPage from "./pages/StrengthPage.jsx";
