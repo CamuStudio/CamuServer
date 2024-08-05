@@ -13,7 +13,8 @@
   --color-fill-text: white;
   --color-fill: #595959;
   --M3-sys-light-outline: #72777F;
-  --M3-sys-light-primary: #30628C
+  --M3-sys-light-primary: #30628C;
+  --m-3-state-layers-light-primary-opacity-012: rgba(48, 98, 140, 0.12)
 }
 
 
