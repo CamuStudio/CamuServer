@@ -1,9 +1,9 @@
 import './App.css'
 import NavBar from "./components/navbar/Navbar.jsx";
-import HeroPage from "./pages/HeroPage.jsx";
-import ServicePage from "./pages/ServicePage.jsx";
-import StrengthPage from "./pages/StrengthPage.jsx";
-import TutorPage from "./pages/TutorPage.jsx";
+import HeroPage from "./pages/Hero/HeroPage.jsx";
+import ServicePage from "./pages/Service/ServicePage.jsx";
+import StrengthPage from "./pages/Strength/StrengthPage.jsx";
+import TutorPage from "./pages/Tutor/TutorPage.jsx";
 import FAQPage from "./pages/FAQ/FAQPage.jsx";
 
 function App() {

@@ -1,6 +1,6 @@
 import styles from './StrengthPage.module.css';
-import Button from "../components/general/Button.jsx";
-import SectionTitle from "../components/general/SectionTitle.jsx";
+import Button from "../../components/general/Button.jsx";
+import SectionTitle from "../../components/general/SectionTitle.jsx";
 
 /**
  * The page about CamuStudio's strength
