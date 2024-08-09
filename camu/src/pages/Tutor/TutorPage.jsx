@@ -1,6 +1,7 @@
 import styles from './TutorPage.module.css'
 import SectionTitle from "../../components/general/SectionTitle.jsx";
 import TutorGrid from "../../components/tutorPage/TutorGrid.jsx";
+import {forwardRef} from "react";
 
 const tutors = [
     {
@@ -36,9 +37,9 @@ const tutors = [
 /**
  * The hero component containing text, contact button, and a hero image
  */
-export default function TutorPage() {
+export default forwardRef(function TutorPage(props, ref) {
     return (
-        <div className={styles.container}>
+        <div className={styles.container} ref={ref}>
             <SectionTitle title='Meet Our Tutors'
                           subtitle='All teachers have architectural backgrounds and advanced studies in multiple fields'
             />
@@ -50,4 +51,4 @@ export default function TutorPage() {
             </section>
         </div>
     )
-}
+})

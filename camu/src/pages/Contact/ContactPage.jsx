@@ -27,10 +27,32 @@ export default forwardRef(function ContactPage(props, ref) {
                 <section className={styles.linksContainer}>
                     <section className={styles.linkColumn}>
                         <p className={styles.subject}>What &apos;s it for</p>
-                        <p className={styles.link}>Our services</p>
-                        <p className={styles.link}>Our strength</p>
-                        <p className={styles.link}>Meet our tutors</p>
-                        <p className={styles.link}>FAQs</p>
+
+                        <p className={styles.link}
+                           onClick={() => {
+                               onSelectSection('Service')
+                           }}
+                        >
+                            Our services
+                        </p>
+                        <p className={styles.link} onClick={() => {
+                            onSelectSection('Strength')
+                        }}
+                        >
+                            Our strength
+                        </p>
+                        <p className={styles.link} onClick={() => {
+                            onSelectSection('Tutor')
+                        }}
+                        >
+                            Meet our tutors
+                        </p>
+                        <p className={styles.link} onClick={() => {
+                            onSelectSection('FAQ')
+                        }}
+                        >
+                            FAQs
+                        </p>
                     </section>
                     <section className={styles.linkColumn}>
                         <p className={styles.subject}>Resources</p>

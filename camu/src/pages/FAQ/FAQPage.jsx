@@ -1,6 +1,7 @@
 import styles from "./FAQPage.module.css";
 import SectionTitle from "../../components/general/SectionTitle.jsx";
 import Question from "../../components/FAQPage/Question.jsx";
+import {forwardRef} from "react";
 
 /**
  * An array of questions and answers. Answers are just placeholders now
@@ -39,10 +40,10 @@ const questionsAndAnswers = [
 /**
  * The page of FAQs
  */
-export default function FAQPage() {
+export default forwardRef(function FAQPage(props, ref) {
     return (
         <main>
-            <div className={styles.container}>
+            <div className={styles.container} ref={ref}>
                 <SectionTitle
                     title='FAQs'
                     subtitle='All your questions answered.'
@@ -56,4 +57,4 @@ export default function FAQPage() {
             </div>
         </main>
     )
-}
+})

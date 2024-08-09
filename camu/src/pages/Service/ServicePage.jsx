@@ -2,11 +2,13 @@ import styles from './ServicePage.module.css';
 import Card from "../../components/general/Card.jsx";
 import SolidButton from "../../components/general/SolidButton.jsx";
 import SectionTitle from "../../components/general/SectionTitle.jsx";
+import {forwardRef} from "react";
 import HollowButton from "../../components/general/HollowButton.jsx";
 
-export default function ServicePage() {
+
+export default forwardRef(function ServicePage(props, ref) {
     return (
-        <div className={styles.container}>
+        <div className={styles.container} ref={ref}>
             <SectionTitle title='Our Services' subtitle='Using architecture as a springboard, pursue diversified development'/>
             <section className={styles.cardsContainer}>
                 <section className={styles.upperContainer}>
@@ -55,5 +57,5 @@ export default function ServicePage() {
                 </section>
             </section>
         </div>
-)
-}
+    )
+})
