@@ -19,6 +19,7 @@ function App() {
 
     /**
      * The function to scroll to certain section by clicking corresponding button on the navbar.
+
      * @param sectionName the name of the section passed from the Navbar
      */
     function handleScrollToSection(sectionName) {
@@ -32,6 +33,7 @@ function App() {
             case "Contact us":
                 contact.current?.scrollIntoView({ behavior: "smooth" });
                 break;
+
             case 'Service':
                 service.current?.scrollIntoView({ behavior: "smooth" });
                 break;

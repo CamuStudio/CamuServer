@@ -1,8 +1,10 @@
 import styles from './ServicePage.module.css';
 import Card from "../../components/general/Card.jsx";
-import Button from "../../components/general/Button.jsx";
+import SolidButton from "../../components/general/SolidButton.jsx";
 import SectionTitle from "../../components/general/SectionTitle.jsx";
 import {forwardRef} from "react";
+import HollowButton from "../../components/general/HollowButton.jsx";
+
 
 export default forwardRef(function ServicePage(props, ref) {
     return (
@@ -15,7 +17,7 @@ export default forwardRef(function ServicePage(props, ref) {
                               subtitle='One-stop service from school to career'
                               buttonText='Contact us'
                         >
-                            <Button text={'Contact us'} className='solidButton'/>
+                            <SolidButton text={'Contact us'}/>
                         </Card>
                     </div>
                     <div className={styles.touringCardContainer}>
@@ -23,7 +25,7 @@ export default forwardRef(function ServicePage(props, ref) {
                               subtitle='Teachers from top schools provide review'
                               buttonText='Contact us'
                         >
-                            <Button text={'Contact us'} className='solidButton'/>
+                            <SolidButton text={'Contact us'}/>
                         </Card>
                     </div>
                 </section>
@@ -33,9 +35,11 @@ export default forwardRef(function ServicePage(props, ref) {
                               subtitle='Multidisciplinary fusion courses based'
                               buttonText='View ->'
                         >
-                            <Button text={'View'} className='hollowButton'>
-                                <img src='/src/assets/general/arrow_forward.svg' alt='arrow_forward' />
-                            </Button>
+                            <div style={{width: '30%', height: '40px'}}>
+                                <HollowButton text={'View'}>
+                                    <img src='/src/assets/general/arrow_forward.svg' alt='arrow_forward'/>
+                                </HollowButton>
+                            </div>
                         </Card>
                     </div>
                     <div className={styles.blogCardContainer}>
@@ -43,9 +47,11 @@ export default forwardRef(function ServicePage(props, ref) {
                               subtitle='Learn from the experiences of successful people'
                               buttonText='View ->'
                         >
-                            <Button text={'View'} className='hollowButton'>
-                                <img src='/src/assets/general/arrow_forward.svg' alt='arrow_forward' />
-                            </Button>
+                            <div style={{width:'30%', height:'40px'}}>
+                                <HollowButton text={'View'}>
+                                    <img src='/src/assets/general/arrow_forward.svg' alt='arrow_forward' />
+                                </HollowButton>
+                            </div>
                         </Card>
                     </div>
                 </section>

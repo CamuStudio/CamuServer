@@ -1,16 +1,32 @@
 import styles from "./Navbar.module.css"
-export default function NavBar() {
+import {useState} from "react";
+
+const navSelections = ['Home', 'Lessons', 'Blog', 'Contact us'];
+
+const NavBar = function({onScrollToSection}) {
+
+    const [selectedButton, setSelectedButton] = useState('Home');
+
     return (
         <nav className={styles.navbar}>
             <div className={styles.logo}>
-                <img src='/src/assets/general/logo.png' alt='logo'/>
+                <img src='src/assets/navbar/logo.png' alt='logo'/>
             </div>
             <div className={styles.buttons}>
-                <button className={styles.button}>Lesson</button>
-                <button className={styles.button}>Blog</button>
-                <button className={styles.button}>Career</button>
-                <button className={styles.button}>Contact us</button>
+                {navSelections.map((selection, i) => (
+                    <button key={i}
+                            className={selection === selectedButton ? styles.selectedButton : styles.button}
+                            onClick={() => {
+                                setSelectedButton(selection)
+                                onScrollToSection(selection)
+                            }}
+                    >
+                        {selection}
+                    </button>
+                ))}
             </div>
         </nav>
     )
 }
+
+export default NavBar;

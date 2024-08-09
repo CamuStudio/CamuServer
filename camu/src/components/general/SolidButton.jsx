@@ -1,8 +1,8 @@
-import styles from './Button.module.css';
+import styles from './SolidButton.module.css';
 
-export default function Button({text, className, children}) {
+export default function SolidButton({text, children}) {
     return (
-        <button className={styles[className]}>
+        <button className={styles.solidButton}>
             <section className={styles.contents}>
                 <span className={styles.text}>{text}</span>
                 {children}

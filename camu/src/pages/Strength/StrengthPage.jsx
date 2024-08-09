@@ -1,5 +1,5 @@
 import styles from './StrengthPage.module.css';
-import Button from "../../components/general/Button.jsx";
+import SolidButton from "../../components/general/SolidButton.jsx";
 import SectionTitle from "../../components/general/SectionTitle.jsx";
 import {forwardRef} from "react";
 
@@ -33,7 +33,7 @@ export default forwardRef(function StrengthPage(props, ref) {
                 </div>
             </section>
             <section className={styles.buttonContainer}>
-                <Button text='Contact us' className='solidButton'/>
+                <SolidButton text='Contact us' className='solidButton'/>
             </section>
         </div>
     )
