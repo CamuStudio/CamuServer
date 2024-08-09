@@ -3,7 +3,7 @@ import {useState} from "react";
 
 const navSelections = ['Home', 'Lessons', 'Blog', 'Contact us'];
 
-export default function NavBar() {
+const NavBar = function({onScrollToSection}) {
 
     const [selectedButton, setSelectedButton] = useState('Home');
 
@@ -16,7 +16,10 @@ export default function NavBar() {
                 {navSelections.map((selection, i) => (
                     <button key={i}
                             className={selection === selectedButton ? styles.selectedButton : styles.button}
-                            onClick={() => setSelectedButton(selection)}
+                            onClick={() => {
+                                setSelectedButton(selection)
+                                onScrollToSection(selection)
+                            }}
                     >
                         {selection}
                     </button>
@@ -25,3 +28,5 @@ export default function NavBar() {
         </nav>
     )
 }
+
+export default NavBar;

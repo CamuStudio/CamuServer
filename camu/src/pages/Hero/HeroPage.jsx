@@ -1,10 +1,11 @@
 import styles from './HeroPage.module.css'
 import Button from "../../components/general/Button.jsx";
+import {forwardRef} from "react";
 
 /**
  * The hero component containing text, contact button, and a hero image
  */
-export default function HeroPage() {
+export default forwardRef(function HeroPage() {
     return (
         <main className={styles.container}>
             <section className={styles.leftContainer}>
@@ -20,4 +21,4 @@ export default function HeroPage() {
             </section>
         </main>
     )
-}
+})

@@ -1,9 +1,10 @@
 import styles from './ContactPage.module.css';
 import Button from "../../components/general/Button.jsx";
+import {forwardRef} from "react";
 
-export default function ContactPage() {
+export default forwardRef(function ContactPage(props, ref) {
     return (
-        <main className={styles.container}>
+        <main className={styles.container} ref={ref}>
             <div className={styles.wrapper}>
                 <section className={styles.topContainer}>
                     <section className={styles.leftContainer}>
@@ -24,7 +25,7 @@ export default function ContactPage() {
                 </section>
                 <section className={styles.linksContainer}>
                     <section className={styles.linkColumn}>
-                    <p className={styles.subject}>What &apos;s it for</p>
+                        <p className={styles.subject}>What &apos;s it for</p>
                         <p className={styles.link}>Our services</p>
                         <p className={styles.link}>Our strength</p>
                         <p className={styles.link}>Meet our tutors</p>
@@ -48,4 +49,4 @@ export default function ContactPage() {
             </div>
         </main>
     )
-}
+})
