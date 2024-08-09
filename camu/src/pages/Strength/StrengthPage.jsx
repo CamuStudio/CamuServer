@@ -1,5 +1,5 @@
 import styles from './StrengthPage.module.css';
-import Button from "../../components/general/Button.jsx";
+import SolidButton from "../../components/general/SolidButton.jsx";
 import SectionTitle from "../../components/general/SectionTitle.jsx";
 
 /**
@@ -32,7 +32,7 @@ export default function StrengthPage() {
                 </div>
             </section>
             <section className={styles.buttonContainer}>
-                <Button text='Contact us' className='solidButton'/>
+                <SolidButton text='Contact us' className='solidButton'/>
             </section>
         </div>
     )
