@@ -1,5 +1,5 @@
 import styles from "./FAQPage.module.css";
-import SectionTitle from "../../components/SectionTitle.jsx";
+import SectionTitle from "../../components/general/SectionTitle.jsx";
 import Question from "../../components/FAQPage/Question.jsx";
 
 /**

@@ -16,7 +16,7 @@
   --M3-key-colors-primary: #0997EB;
   --M3-ref-secondary-secondary95: #DCF5FF;
   --M3-ref-tertiary-tertiary95: #FFEFD1;
-  --M3-sys-light-outline: #72777F;
+  --M3-sys-light-outline: rgba(114, 119, 127, 0.3);
   --M3-sys-light-primary: #30628C;
   --M3-sys-light-surface: #F7F9FF;
   --M3-sys-light-on-primary: white;
