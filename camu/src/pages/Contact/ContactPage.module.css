@@ -1,6 +1,6 @@
 .container {
     display: flex;
-    padding: 200px 32px 32px 32px;
+    padding: 300px 32px 32px 32px;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
@@ -39,7 +39,6 @@
 
 .subtitle {
     color: #424A4E;
-
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
