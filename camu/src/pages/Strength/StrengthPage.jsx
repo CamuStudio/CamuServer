@@ -1,13 +1,14 @@
 import styles from './StrengthPage.module.css';
 import Button from "../../components/general/Button.jsx";
 import SectionTitle from "../../components/general/SectionTitle.jsx";
+import {forwardRef} from "react";
 
 /**
  * The page about CamuStudio's strength
  */
-export default function StrengthPage() {
+export default forwardRef(function StrengthPage(props, ref) {
     return (
-        <div className={styles.container}>
+        <div className={styles.container} ref={ref}>
             <SectionTitle title='Our Strength'
                           subtitle='Comprehensive portfolio guidance, application and follow-up planning'
             />
@@ -36,4 +37,4 @@ export default function StrengthPage() {
             </section>
         </div>
     )
-}
+})

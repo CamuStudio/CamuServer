@@ -87,8 +87,6 @@
 .subject, .link {
     color: var(--M3-sys-light-primary, #30628C);
     text-align: center;
-    font-size: 16px;
-    font-style: normal;
     font-weight: 700;
     line-height: 24px; /* 150% */
     letter-spacing: 0.5px;
@@ -96,6 +94,10 @@
 
 .link {
     font-weight: 400;
+}
+
+.link:hover {
+    cursor: pointer;
 }
 
 .footersContainer {
