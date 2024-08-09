@@ -3,7 +3,7 @@ import SolidButton from "../../components/general/SolidButton.jsx";
 import {forwardRef} from "react";
 import HollowButton from "../../components/general/HollowButton.jsx";
 
-export default forwardRef(function ContactPage(props, ref) {
+export default forwardRef(function ContactPage({onSelectSection}, ref) {
     return (
         <main className={styles.container} ref={ref}>
             <div className={styles.wrapper}>
