@@ -4,6 +4,7 @@ import {forwardRef, useState} from "react";
 import HollowButton from "../../components/general/HollowButton.jsx";
 import ContactForm from "../../components/contactPage/ContactForm.jsx";
 
+
 export default forwardRef(function ContactPage(props, ref) {
 
     const [showMessageBox, setShowMessageBox] = useState(false)
@@ -11,7 +12,7 @@ export default forwardRef(function ContactPage(props, ref) {
     function toggleShowMessageBox() {
         setShowMessageBox(!showMessageBox);
     }
-
+  
     return (
         <main className={styles.container} ref={ref}>
             <div className={styles.wrapper}>
