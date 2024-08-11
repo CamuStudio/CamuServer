@@ -30,12 +30,21 @@
     gap: var(--Spacing---Size-Space---160);
 }
 
-.buttonContainer {
+.buttonContainer, .disabledButtonContainer {
     width: calc(50% - 8px);
 }
 
 .buttonContainer > * {
     width: 100%;
+}
+
+.disabledButtonContainer > * {
+    width: 100%;
+}
+
+.disabledButtonContainer {
+    filter: opacity(0.35) invert(1) grayscale(1);
+    pointer-events: none;
 }
 
 .plusContainer {

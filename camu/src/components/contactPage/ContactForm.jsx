@@ -17,6 +17,8 @@ export default function ContactForm() {
         e.preventDefault();
         console.log('This form is submitted!');
         console.log({name, wechatId});
+        setName('')
+        setWechatId('');
     }
 
     return (
@@ -31,14 +33,14 @@ export default function ContactForm() {
             </section>
             <section className={styles.buttonsContainer}>
                 <div className={styles.buttonContainer}>
-                    <SolidButton text={'Submit'} onClick={handleSubmitForm} />
-                </div>
-                <div className={styles.buttonContainer}>
                     <HollowButton text={'Tell us more'}>
                         <div className={styles.plusContainer}>
                             <img src='/src/assets/general/plus.svg' alt='plus'/>
                         </div>
                     </HollowButton>
+                </div>
+                <div className={name && wechatId ? styles.buttonContainer : styles.disabledButtonContainer}>
+                    <SolidButton text={'Submit'} onClick={handleSubmitForm}/>
                 </div>
             </section>
         </form>
