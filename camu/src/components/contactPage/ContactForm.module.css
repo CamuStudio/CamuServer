@@ -1,17 +1,18 @@
 /* Can't find reference from Figma, to be updated. */
 
 .formContainer {
+    /*background-color: red;*/
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 70%;
+    height: 90%;
     gap: var(--Spacing---Size-Space---240);
 }
 
 .titleContainer {
     display: flex;
     flex-direction: column;
-    padding-top: var(--Spacing---Size-Space---320);
+    padding-top: var(--Spacing---Size-Space---640);
     gap: var(--Spacing---Size-Space---120);
 }
 
@@ -50,4 +51,30 @@
 .plusContainer {
     width: 18px;
     height: 18px;
+}
+
+.interestContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--Spacing---Size-Space---120);
+
+}
+
+.interestTitle {
+    font-size: 16px;
+}
+
+.interests {
+    display: flex;
+    gap: var(--Spacing---Size-Space---160);
+}
+
+span {
+    font-size: 14px;
+}
+
+.submitButtonContainer {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: var(--Spacing---Size-Space---40);
 }
