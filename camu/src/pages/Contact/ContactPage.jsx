@@ -2,6 +2,7 @@ import styles from './ContactPage.module.css';
 import SolidButton from "../../components/general/SolidButton.jsx";
 import {forwardRef, useState} from "react";
 import HollowButton from "../../components/general/HollowButton.jsx";
+import ContactForm from "../../components/contactPage/ContactForm.jsx";
 
 export default forwardRef(function ContactPage(props, ref) {
 
@@ -28,7 +29,7 @@ export default forwardRef(function ContactPage(props, ref) {
                             </h4>
                         </section>
                         <section className={styles.rightContainer}>
-                            <img src='/src/assets/contact/contact.png' alt='contact'/>
+                            <ContactForm />
                         </section>
                     </section>
                 ) : <section className={styles.topContainer}>

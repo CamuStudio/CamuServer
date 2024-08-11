@@ -61,7 +61,9 @@
 
 .rightContainer {
     display: flex;
+    height: 90%;
     width: calc(50% - 140px);
+    align-items: center;
 }
 
 .rightContainer img {

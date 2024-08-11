@@ -1,0 +1,14 @@
+
+.input {
+    height: 24px;
+    width: calc(50% - 16px);
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background: transparent;
+    border-radius: 5px;
+    border: 1px solid var(--M3-sys-light-outline);
+}
+
+.input:focus {
+    border-color: var(--M3-sys-light-primary, #30628C);
+}
