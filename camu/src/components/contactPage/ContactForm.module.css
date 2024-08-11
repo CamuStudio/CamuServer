@@ -1,0 +1,53 @@
+/* Can't find reference from Figma, to be updated. */
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70%;
+    gap: var(--Spacing---Size-Space---240);
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: column;
+    padding-top: var(--Spacing---Size-Space---320);
+    gap: var(--Spacing---Size-Space---120);
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 14px;
+}
+
+.inputContainer, .buttonsContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--Spacing---Size-Space---160);
+}
+
+.buttonContainer, .disabledButtonContainer {
+    width: calc(50% - 8px);
+}
+
+.buttonContainer > * {
+    width: 100%;
+}
+
+.disabledButtonContainer > * {
+    width: 100%;
+}
+
+.disabledButtonContainer {
+    filter: opacity(0.35) invert(1) grayscale(1);
+    pointer-events: none;
+}
+
+.plusContainer {
+    width: 18px;
+    height: 18px;
+}
