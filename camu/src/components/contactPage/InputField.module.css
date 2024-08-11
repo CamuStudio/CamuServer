@@ -1,14 +1,29 @@
+.container {
+    display: flex;
+    width: 50%;
+    position: relative;
+}
 
 .input {
     height: 24px;
-    width: calc(50% - 16px);
-    padding-top: 12px;
-    padding-bottom: 12px;
+    width: 100%;
+    padding: 12px;
     background: transparent;
     border-radius: 5px;
-    border: 1px solid var(--M3-sys-light-outline);
+    border: 1px solid black;
+    font-size: 18px;
 }
 
 .input:focus {
     border-color: var(--M3-sys-light-primary, #30628C);
+}
+
+.label {
+    background-color: #F7F9FF;
+    position: absolute;
+    top: -8px;
+    left: 12px;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-size: 12px;
 }
