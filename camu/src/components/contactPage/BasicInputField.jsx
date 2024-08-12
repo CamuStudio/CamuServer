@@ -1,6 +1,6 @@
-import styles from "./InputField.module.css";
+import styles from "./BasicInputField.module.css";
 
-export default function InputField({name, value, onChange}) {
+export default function BasicInputField({name, value, onChange}) {
     return (
         <div className={styles.container}>
             <input

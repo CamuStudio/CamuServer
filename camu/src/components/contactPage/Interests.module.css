@@ -1,0 +1,52 @@
+/* Can't find reference from Figma, to be updated. */
+
+.interestTitle {
+    font-size: 16px;
+}
+
+.interests {
+    position: relative;
+    display: flex;
+    width: 120%;
+    flex-wrap: wrap;
+    list-style: none;
+    border: 1px solid var(--M3-sys-light-primary, #30628C);
+    gap: 8px;
+}
+
+.button, .selectedButton {
+    /*display: flex;*/
+    color: var(--M3-sys-light-on-surface-variant);
+    background: none;
+    padding: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid var(--M3-sys-light-on-surface-variant);
+    transition: all 0.3s ease-in-out;
+}
+
+.selectedButton {
+    border: 1px solid transparent;
+    background: var(--Schemes-Secondary-Container);
+    transition: all 0.3s ease-in-out;
+}
+
+.otherInterestButtonContainer {
+    position: absolute;
+    width: 100%;
+    bottom: -32px;
+    display: flex;
+    gap: 8px;
+}
+
+.addInterestField {
+    width: 100%;
+    display: flex;
+}
+
+.submitButtonContainer {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: var(--Spacing---Size-Space---320);
+}

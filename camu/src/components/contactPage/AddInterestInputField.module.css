@@ -1,0 +1,30 @@
+/* Can't find reference from Figma, to be updated. */
+
+.container {
+    display: flex;
+    position: relative;
+}
+
+.input {
+    height: 24px;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 2px solid var(--M3-sys-light-primary);
+    font-size: 12px;
+    color: black;
+}
+
+.icon, .disabledIcon{
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    right: 0;
+    top: 6px;
+    padding-right: 2px;
+}
+
+.disabledIcon {
+    filter: grayscale(100%) invert(1);
+}
