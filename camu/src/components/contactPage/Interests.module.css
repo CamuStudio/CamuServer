@@ -10,7 +10,6 @@
     width: 120%;
     flex-wrap: wrap;
     list-style: none;
-    border: 1px solid var(--M3-sys-light-primary, #30628C);
     gap: 8px;
 }
 
@@ -38,6 +37,13 @@
     bottom: -32px;
     display: flex;
     gap: 8px;
+}
+
+.deleteInterestIcon {
+    z-index: 100;
+    width: 18px;
+    height: 18px;
+    transform: rotate(-45deg);
 }
 
 .addInterestField {

@@ -6,7 +6,7 @@ import AddInterestInputField from "./AddInterestInputField.jsx";
 export default function Interests({interests, onSelect}) {
 
     const [showAddInterestField, setShowAddInterestField] = useState(false)
-    const [newInterests, setNewInterests] = useState([])
+    const [newInterests, setNewInterests] = useState(new Set())
 
     /**
      * The function to handle adding new interests
@@ -14,10 +14,21 @@ export default function Interests({interests, onSelect}) {
      */
     function handleAddNewInterest(newInterest) {
         console.log('newInterest received!');
-        setNewInterests([...newInterests, newInterest]);
+        setNewInterests(prev => (new Set(prev)).add(newInterest));
 
         // Add one interest, and hide the input field.
         setShowAddInterestField(!showAddInterestField);
+    }
+
+    /**
+     * The function to remove a new interest
+     * @param newInterest the new interest to be added
+     */
+    function removeNewInterest(newInterest) {
+        setNewInterests(prev => {
+            prev.delete(newInterest);
+            return new Set(prev);
+        });
     }
 
     return (
@@ -31,11 +42,18 @@ export default function Interests({interests, onSelect}) {
                     </div>
                 ))}
                 <div className={styles.otherInterestButtonContainer}>
-                    {newInterests.map((newInterest, index) => (
+                    {Array.from(newInterests).map((newInterest, index) => (
                         <div key={index}>
-                            <InterestButton interest={newInterest}
-                                            onClick={onSelect}
-                            />
+                            <InterestButton
+                                interest={newInterest}
+                                onClick={onSelect}
+                            >
+                                <img className={styles.deleteInterestIcon}
+                                     src='/src/assets/general/plus.svg'
+                                     alt='delete_interest'
+                                     onClick={() => removeNewInterest(newInterest)}
+                                />
+                            </InterestButton>
                         </div>
                     ))}
                     <InterestButton interest={'Others'}

@@ -1,7 +1,7 @@
 import styles from './InterestButton.module.css'
 import {useState} from "react";
 
-export default function InterestButton({interest, onClick}) {
+export default function InterestButton({interest, onClick, children}) {
 
     const [selected, setSelected] = useState(false);
 
@@ -19,7 +19,10 @@ export default function InterestButton({interest, onClick}) {
         <button
             className={selected ? styles.selectedButton: styles.button}
             onClick={handleSelected}>
-            {interest}
+            <div className={styles.contents}>
+                <span>{interest}</span>
+                {children}
+            </div>
         </button>
     )
 }

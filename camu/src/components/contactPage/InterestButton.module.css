@@ -17,3 +17,9 @@
     background: var(--Schemes-Secondary-Container);
     transition: all 0.3s ease-in-out;
 }
+
+.contents {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
