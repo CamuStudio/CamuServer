@@ -62,7 +62,7 @@
 .formContainer {
     display: flex;
     height: 100%;
-    width: calc(50% - 140px);
+    width: calc(60% - 140px);
     align-items: center;
 }
 

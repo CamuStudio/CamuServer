@@ -3,7 +3,7 @@ import InterestButton from "./InterestButton.jsx";
 import {useState} from "react";
 import AddInterestInputField from "./AddInterestInputField.jsx";
 
-export default function Interests({interests, onSelect}) {
+export default function Interests({interests, onSelect, onAddNewInterest}) {
 
     const [showAddInterestField, setShowAddInterestField] = useState(false)
     const [newInterests, setNewInterests] = useState(new Set())
@@ -15,6 +15,7 @@ export default function Interests({interests, onSelect}) {
     function handleAddNewInterest(newInterest) {
         console.log('newInterest received!');
         setNewInterests(prev => (new Set(prev)).add(newInterest));
+        onAddNewInterest(newInterest);
 
         // Add one interest, and hide the input field.
         setShowAddInterestField(!showAddInterestField);
@@ -47,6 +48,7 @@ export default function Interests({interests, onSelect}) {
                             <InterestButton
                                 interest={newInterest}
                                 onClick={onSelect}
+                                selectedByDefault={true}
                             >
                                 <img className={styles.deleteInterestIcon}
                                      src='/src/assets/general/plus.svg'

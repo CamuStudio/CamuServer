@@ -17,6 +17,7 @@ export default function AddInterestInputField({onAddNewInterest}) {
     function handleAddNewInterest(e) {
         e.preventDefault();
         console.log('newInterest added!');
+        setNewInterest('');
         onAddNewInterest(newInterest);
     }
 

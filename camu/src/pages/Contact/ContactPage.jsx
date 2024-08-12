@@ -3,14 +3,24 @@ import SolidButton from "../../components/general/SolidButton.jsx";
 import {forwardRef, useState} from "react";
 import HollowButton from "../../components/general/HollowButton.jsx";
 import ContactForm from "../../components/contactPage/ContactForm.jsx";
+import Finished from "../../components/contactPage/Finished.jsx";
 
 
 export default forwardRef(function ContactPage(props, ref) {
 
     const [showMessageBox, setShowMessageBox] = useState(false)
+    const [showFinish, setShowFinish] = useState(false);
 
     function toggleShowMessageBox() {
         setShowMessageBox(!showMessageBox);
+    }
+
+    function toggleShowFinish() {
+        setShowFinish(!showFinish);
+    }
+
+    function handleBackToMessage() {
+        setShowFinish(false);
     }
   
     return (
@@ -30,10 +40,14 @@ export default forwardRef(function ContactPage(props, ref) {
                             </h4>
                         </section>
                         <section className={styles.formContainer}>
-                            <ContactForm />
+                            {showFinish ? (
+                                <Finished onBackToMessage={handleBackToMessage}/>
+                            ) : (
+                                <ContactForm onShowFinish={toggleShowFinish} />
+                            )}
                         </section>
                     </section>
-                ) : <section className={styles.topContainer}>
+                ) : (<section className={styles.topContainer}>
                     <section className={styles.leftContainer}>
                         <p className={styles.subtitle}>Join the club</p>
                         <h4 className={styles.title}>
@@ -46,10 +60,11 @@ export default forwardRef(function ContactPage(props, ref) {
                             </HollowButton>
                         </section>
                     </section>
-                    <section className={styles.rightContainer}>
-                        <img src='/src/assets/contact/contact.png' alt='contact'/>
-                    </section>
-                </section>}
+                        <section className={styles.rightContainer}>
+                            <img src='/src/assets/contact/contact.png' alt='contact'/>
+                        </section>
+                    </section>)
+                }
                 <section className={styles.linksContainer}>
                     <section className={styles.linkColumn}>
                         <p className={styles.subject}>What &apos;s it for</p>

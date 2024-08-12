@@ -1,0 +1,25 @@
+/* Can't find reference from Figma, to be updated. */
+
+.container {
+    /*background-color: red;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+    gap: var(--Spacing---Size-Space---320);
+}
+
+.image {
+    display: flex;
+    width: 120px;
+    height: 120px;
+    background-color: var(--Schemes-Secondary-Container);
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: var(--Spacing---Size-Space---120);
+}
