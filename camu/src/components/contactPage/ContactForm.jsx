@@ -3,11 +3,10 @@ import BasicInputField from "./BasicInputField.jsx";
 import SolidButton from "../general/SolidButton.jsx";
 import HollowButton from "../general/HollowButton.jsx";
 import {useState} from "react";
-import InterestButton from "./InterestButton.jsx";
 import Interests from "./Interests.jsx";
 
 const defaultInterests = [
-    'Architectual Design',
+    'Architecture Design',
     'Conceptual Design',
     '3D Modelling',
     'Environmental Design',
@@ -16,12 +15,11 @@ const defaultInterests = [
     'Website Design',
 ]
 
-export default function ContactForm() {
+export default function ContactForm({onShowFinish}) {
 
     const [name, setName] = useState('');
     const [wechatId, setWechatId] = useState('');
     const [showInterests, setShowInterests] = useState(false);
-    const [allInterests, setAllInterests] = useState(defaultInterests);
     const [selectedInterests, setSelectedInterests] = useState(new Set());
 
     /**
@@ -36,6 +34,7 @@ export default function ContactForm() {
             wechatId,
             selectedInterests: Array.from(selectedInterests)
         });
+        onShowFinish();
         setName('')
         setWechatId('');
     }
@@ -73,41 +72,43 @@ export default function ContactForm() {
     }
 
     return (
-        <form className={showInterests ? styles.formWithInterestContainer : styles.formContainer}>
-            <section className={styles.titleContainer}>
-                <h4 className={styles.title}>Send a message</h4>
-                <p className={styles.subtitle}>Camu will contact you via WeChat in 24 hours</p>
-            </section>
-            <section className={styles.inputContainer}>
-                <BasicInputField name={'Name'} value={name} onChange={(e) => setName(e.target.value)} />
-                <BasicInputField name={'WeChat ID'} value={wechatId} onChange={(e) => setWechatId(e.target.value)} />
-            </section>
-            {showInterests ? (
-                <section className={styles.interestContainer}>
-                    <Interests interests={allInterests}
-                               onSelect={handleSelectInterest}
-                               onAddNewInterest={handleAddNewInterest}
-                    />
-                    <section className={styles.submitButtonContainer}>
+        <>
+            <form className={showInterests ? styles.formWithInterestContainer : styles.formContainer}>
+                <section className={styles.titleContainer}>
+                    <h4 className={styles.title}>Send a message</h4>
+                    <p className={styles.subtitle}>Camu will contact you via WeChat in 24 hours</p>
+                </section>
+                <section className={styles.inputContainer}>
+                    <BasicInputField name={'Name'} value={name} onChange={(e) => setName(e.target.value)}/>
+                    <BasicInputField name={'WeChat ID'} value={wechatId} onChange={(e) => setWechatId(e.target.value)}/>
+                </section>
+                {showInterests ? (
+                    <section className={styles.interestContainer}>
+                        <Interests interests={defaultInterests}
+                                   onSelect={handleSelectInterest}
+                                   onAddNewInterest={handleAddNewInterest}
+                        />
+                        <section className={styles.submitButtonContainer}>
+                            <div className={name && wechatId ? styles.buttonContainer : styles.disabledButtonContainer}>
+                                <SolidButton text={'Submit'} onClick={handleSubmitForm}/>
+                            </div>
+                        </section>
+                    </section>
+                ) : (
+                    <section className={styles.buttonsContainer}>
+                        <div className={styles.buttonContainer}>
+                            <HollowButton text={'Tell us more'} onClick={handleShowInterest}>
+                                <div className={styles.plusContainer}>
+                                    <img src='/src/assets/general/plus.svg' alt='plus'/>
+                                </div>
+                            </HollowButton>
+                        </div>
                         <div className={name && wechatId ? styles.buttonContainer : styles.disabledButtonContainer}>
                             <SolidButton text={'Submit'} onClick={handleSubmitForm}/>
                         </div>
                     </section>
-                </section>
-            ) : (
-                <section className={styles.buttonsContainer}>
-                    <div className={styles.buttonContainer}>
-                        <HollowButton text={'Tell us more'} onClick={handleShowInterest}>
-                            <div className={styles.plusContainer}>
-                                <img src='/src/assets/general/plus.svg' alt='plus'/>
-                            </div>
-                        </HollowButton>
-                    </div>
-                    <div className={name && wechatId ? styles.buttonContainer : styles.disabledButtonContainer}>
-                        <SolidButton text={'Submit'} onClick={handleSubmitForm}/>
-                    </div>
-                </section>
-            )}
-        </form>
+                )}
+            </form>
+        </>
     )
 }
