@@ -14,3 +14,16 @@
     grid-column-gap: var(--Spacing---Size-Space---160, 16px);
     grid-row-gap: var(--Spacing---Size-Space---640, 64px);
 }
+
+.tutorInfoContainer {
+    background-color: #B4EBFF;
+    position: fixed;
+    top: 20%;
+    min-width: 1300px;
+    width: 60%;
+    height: 60%;
+    z-index: 20;
+    display: flex;
+    padding: var(--Spacing---Size-Space---320);
+}
+

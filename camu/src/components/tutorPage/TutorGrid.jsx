@@ -1,4 +1,5 @@
 import styles from './TutorGrid.module.css';
+import NameCard from "./NameCard.jsx";
 
 /**
  * An Extracted component for each tutors
@@ -29,14 +30,7 @@ export default function TutorGrid({tutor, blank=false, onSelectTutor}) {
             <section className={styles.description}>
                 {tutor !== {} ?
                     <>
-                        <h6 className={styles.subject}>{subject}</h6>
-                        <div className={styles.nameCard}>
-                            <img src={avatarSrc} alt={name}/>
-                            <div className={styles.textContainer}>
-                                <p className={styles.name}>{name}</p>
-                                <p className={styles.qualification}>{qualification}</p>
-                            </div>
-                        </div>
+                        <NameCard tutor={tutor} />
                     </> : null
                 }
             </section>

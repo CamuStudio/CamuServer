@@ -1,0 +1,58 @@
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: var(--Spacing---Size-Space---320);
+    position: relative;
+}
+
+.container img {
+    position: absolute;
+    z-index: 30;
+    top: 0;
+    right: 0;
+    transform: rotate(-45deg);
+}
+
+.imagesContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    gap: var(--Spacing---Size-Space---160);
+}
+
+.largeImg {
+    display: flex;
+    width: 100%;
+    flex: 14;
+    border-radius: 10px;
+    background-color: red;
+}
+
+.smallImgContainer {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    border-radius: 10px;
+    background-color: yellow;
+    gap: var(--Spacing---Size-Space---120);
+}
+
+.smallImg {
+    display: flex;
+    height: 100%;
+    min-width: 50px;
+    border-radius: 10px;
+    background-color: orange;
+}
+
+.infoContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--Spacing---Size-Space---120);
+}
+
+.infoContainer:first-child {
+    margin-top: var(--Spacing---Size-Space---320);
+}

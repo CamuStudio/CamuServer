@@ -3,6 +3,7 @@ import SectionTitle from "../components/SectionTitle.jsx";
 import TutorGrid from "../components/tutorPage/TutorGrid.jsx";
 import {useState} from "react";
 import TutorInfo from "../components/tutorPage/TutorInfo.jsx";
+import NameCard from "../components/tutorPage/NameCard.jsx";
 
 const tutors = [
     {
@@ -61,7 +62,9 @@ export default function TutorPage() {
                 <TutorGrid blank={true} tutor={{}} />
             </section>
             {selectedTutor && (
-                <h1>{selectedTutor.name}</h1>
+                <section className={styles.tutorInfoContainer}>
+                    <TutorInfo tutor={selectedTutor} />
+                </section>
             )}
         </div>
     )
