@@ -3,7 +3,6 @@ import SectionTitle from "../components/SectionTitle.jsx";
 import TutorGrid from "../components/tutorPage/TutorGrid.jsx";
 import {useState} from "react";
 import TutorInfo from "../components/tutorPage/TutorInfo.jsx";
-import NameCard from "../components/tutorPage/NameCard.jsx";
 
 const tutors = [
     {
@@ -11,28 +10,44 @@ const tutors = [
         subject: 'Generative design',
         avatarSrc: '../src/assets/tutors/tina.png',
         name: 'Tina.W',
-        qualification: 'Graduate from Upenn'
+        qualification: 'Graduate from Upenn',
+        description: <p className={styles.description}>Tina Wang is an experienced <strong>architectural
+            tutor</strong> at our agency, known for her expertise in, <strong>conceptual design, 3D modelling</strong>,
+            and <strong>portfolio development.</strong>. She is committed to helping students refine their architectural
+            skills and excel in presenting their work effectively.</p>
     },
     {
         imgSrc: '../src/assets/tutors/tutor2.png',
         subject: 'Generative design',
         avatarSrc: '../src/assets/tutors/andy.png',
         name: 'Andy C.',
-        qualification: 'Work at HJS'
+        qualification: 'Work at HJS',
+        description: <p className={styles.description}>Andy C. is an experienced <strong>architectural
+            tutor</strong> at our agency, known for her expertise in, <strong>conceptual design, 3D modelling</strong>,
+            and <strong>portfolio development.</strong>. He is committed to helping students refine their architectural
+            skills and excel in presenting their work effectively.</p>
     },
     {
         imgSrc: '../src/assets/tutors/tutor3.png',
         subject: 'Generative design',
         avatarSrc: '../src/assets/tutors/steve.png',
         name: 'Steve J.',
-        qualification: 'Work at Apple'
+        qualification: 'Work at Apple',
+        description: <p className={styles.description}>Steve J. is an experienced <strong>architectural
+            tutor</strong> at our agency, known for her expertise in, <strong>conceptual design, 3D modelling</strong>,
+            and <strong>portfolio development.</strong>. He is committed to helping students refine their architectural
+            skills and excel in presenting their work effectively.</p>
     },
     {
         imgSrc: '../src/assets/tutors/tutor4.png',
         subject: 'Generative design',
         avatarSrc: '../src/assets/tutors/lawrence.png',
         name: 'Laurence L.',
-        qualification: 'Graduate from USC'
+        qualification: 'Graduate from USC',
+        description: <p className={styles.description}>Laurence L. is an experienced <strong>architectural
+            tutor</strong> at our agency, known for her expertise in, <strong>conceptual design, 3D modelling</strong>,
+            and <strong>portfolio development.</strong>. She is committed to helping students refine their architectural
+            skills and excel in presenting their work effectively.</p>
     },
 ]
 

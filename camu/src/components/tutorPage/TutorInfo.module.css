@@ -6,7 +6,7 @@
     position: relative;
 }
 
-.container img {
+.closeIcon {
     position: absolute;
     z-index: 30;
     top: 0;

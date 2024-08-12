@@ -1,3 +1,14 @@
+.description {
+    color: var(--M3-sys-light-on-surface-variant, #42474E);
+    font-size: 18px;
+    line-height: 28px; /* 155.556% */
+    letter-spacing: 1.08px;
+}
+
+.description strong {
+    font-weight: 700;
+}
+
 .container {
     display: flex;
     flex-direction: column;

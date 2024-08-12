@@ -1,4 +1,5 @@
 import styles from "./TutorInfo.module.css";
+import NameCard from "./NameCard.jsx";
 
 /**
  * The component of tutor information
@@ -8,7 +9,7 @@ import styles from "./TutorInfo.module.css";
 export default function TutorInfo({tutor, onCloseTutorInfo}) {
     return (
        <div className={styles.container}>
-           <img
+           <img className={styles.closeIcon}
                src="src/assets/general/plus.svg"
                alt="close"
                onClick={onCloseTutorInfo}
@@ -22,7 +23,8 @@ export default function TutorInfo({tutor, onCloseTutorInfo}) {
                </div>
            </section>
            <section className={styles.infoContainer}>
-               <h1>{tutor.name}</h1>
+               <NameCard tutor={tutor} />
+               <p>{tutor.description}</p>
            </section>
        </div>
     )

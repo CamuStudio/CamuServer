@@ -28,10 +28,11 @@ export default function TutorGrid({tutor, blank=false, onSelectTutor}) {
                 }
             </section>
             <section className={styles.description}>
-                {tutor !== {} ?
+                {blank ?
+                     null :
                     <>
                         <NameCard tutor={tutor} />
-                    </> : null
+                    </>
                 }
             </section>
         </section>
