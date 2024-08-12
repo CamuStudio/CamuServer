@@ -16,7 +16,7 @@
   --M3-key-colors-primary: #0997EB;
   --M3-ref-secondary-secondary95: #DCF5FF;
   --M3-ref-tertiary-tertiary95: #FFEFD1;
-  --M3-sys-light-outline: #72777F;
+  --M3-sys-light-outline: rgba(114, 119, 127, 0.3);
   --M3-sys-light-primary: #30628C;
   --M3-sys-light-surface: #F7F9FF;
   --M3-sys-light-on-primary: white;
@@ -29,6 +29,7 @@
   --Schemes-Secondary-Container: #B4EBFF;
   --Schemes-Tertiary-Container: #FFDF96;
   --Shade-Color-700: #6D7173;
+  --m-3-state-layers-light-primary-opacity-012: rgba(48, 98, 140, 0.12)
 }
 
 /**
@@ -38,10 +39,12 @@
   --Spacing---Section-Padding-Medium: 100px;
   --Spacing---Section-Padding-Large: 120px;
   --Spacing---Size-Space---0: 0;
+  --Spacing---Size-Space---40: 4px;
   --Spacing---Size-Space---120: 12px;
   --Spacing---Size-Space---160: 16px;
   --Spacing---Size-Space---240: 24px;
   --Spacing---Size-Space---320: 32px;
+  --Spacing---Size-Space---480: 48px;
   --Spacing---Size-Space---640: 64px;
 }
 
@@ -50,6 +53,7 @@
  */
 * {
   --Corner-radius-Small: 12px;
+  --Corner-radius-Large: 32px;
 }
 
 .wrapper {

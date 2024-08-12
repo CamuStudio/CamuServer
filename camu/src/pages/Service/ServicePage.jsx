@@ -1,11 +1,14 @@
 import styles from './ServicePage.module.css';
-import Card from "../components/Card.jsx";
-import Button from "../components/Button.jsx";
-import SectionTitle from "../components/SectionTitle.jsx";
+import Card from "../../components/general/Card.jsx";
+import SolidButton from "../../components/general/SolidButton.jsx";
+import SectionTitle from "../../components/general/SectionTitle.jsx";
+import {forwardRef} from "react";
+import HollowButton from "../../components/general/HollowButton.jsx";
 
-export default function ServicePage() {
+
+export default forwardRef(function ServicePage(props, ref) {
     return (
-        <div className={styles.container}>
+        <div className={styles.container} ref={ref}>
             <SectionTitle title='Our Services' subtitle='Using architecture as a springboard, pursue diversified development'/>
             <section className={styles.cardsContainer}>
                 <section className={styles.upperContainer}>
@@ -14,7 +17,7 @@ export default function ServicePage() {
                               subtitle='One-stop service from school to career'
                               buttonText='Contact us'
                         >
-                            <Button text={'Contact us'} className='solidButton'/>
+                            <SolidButton text={'Contact us'}/>
                         </Card>
                     </div>
                     <div className={styles.touringCardContainer}>
@@ -22,7 +25,7 @@ export default function ServicePage() {
                               subtitle='Teachers from top schools provide review'
                               buttonText='Contact us'
                         >
-                            <Button text={'Contact us'} className='solidButton'/>
+                            <SolidButton text={'Contact us'}/>
                         </Card>
                     </div>
                 </section>
@@ -32,9 +35,11 @@ export default function ServicePage() {
                               subtitle='Multidisciplinary fusion courses based'
                               buttonText='View ->'
                         >
-                            <Button text={'View'} className='hollowButton'>
-                                <img src='/public/arrow_forward.svg' alt='arrow_forward' />
-                            </Button>
+                            <div style={{width: '30%', height: '40px'}}>
+                                <HollowButton text={'View'}>
+                                    <img src='/src/assets/general/arrow_forward.svg' alt='arrow_forward'/>
+                                </HollowButton>
+                            </div>
                         </Card>
                     </div>
                     <div className={styles.blogCardContainer}>
@@ -42,13 +47,15 @@ export default function ServicePage() {
                               subtitle='Learn from the experiences of successful people'
                               buttonText='View ->'
                         >
-                            <Button text={'View'} className='hollowButton'>
-                                <img src='/public/arrow_forward.svg' alt='arrow_forward' />
-                            </Button>
+                            <div style={{width:'30%', height:'40px'}}>
+                                <HollowButton text={'View'}>
+                                    <img src='/src/assets/general/arrow_forward.svg' alt='arrow_forward' />
+                                </HollowButton>
+                            </div>
                         </Card>
                     </div>
                 </section>
             </section>
         </div>
-)
-}
+    )
+})

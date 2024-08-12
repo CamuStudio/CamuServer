@@ -45,20 +45,20 @@
 
 .evaluationCardContainer {
     width: calc(47% - 16px);
-    background-image: url("/public/portfolio_evaluation.svg");
+    background-image: url("/src/assets/services/portfolio_evaluation.svg");
 }
 
 .touringCardContainer {
     width: calc(53% - 16px);
-    background-image: url("/public/portfolio_touring.svg");
+    background-image: url("/src/assets/services/portfolio_touring.svg");
 }
 
 .lessonsCardContainer {
     width: calc(53% - 16px);
-    background-image: url("/public/lessons.svg");
+    background-image: url("/src/assets/services/lessons.svg");
 }
 
 .blogCardContainer {
     width: calc(47% - 16px);
-    background-image: url("/public/blog.svg");
+    background-image: url("/src/assets/services/blog.svg");
 }

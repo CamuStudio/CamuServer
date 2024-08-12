@@ -1,0 +1,96 @@
+/* Can't find reference from Figma, to be updated. */
+
+.formContainer {
+    /*background-color: red;*/
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70%;
+    gap: var(--Spacing---Size-Space---240);
+}
+
+.formWithInterestContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: var(--Spacing---Size-Space---160);
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: column;
+    padding-top: var(--Spacing---Size-Space---640);
+    gap: var(--Spacing---Size-Space---120);
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 14px;
+}
+
+.inputContainer, .buttonsContainer {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    gap: var(--Spacing---Size-Space---160);
+}
+
+.buttonContainer, .disabledButtonContainer {
+    width: calc(50% - 8px);
+}
+
+.buttonContainer > * {
+    width: 100%;
+}
+
+.disabledButtonContainer > * {
+    width: 100%;
+}
+
+.disabledButtonContainer {
+    filter: opacity(0.35) invert(1) grayscale(1);
+    pointer-events: none;
+}
+
+.plusContainer {
+    width: 18px;
+    height: 18px;
+}
+
+.interestContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--Spacing---Size-Space---120);
+}
+
+.interestTitle {
+    font-size: 16px;
+}
+
+.interests {
+    position: relative;
+    display: flex;
+    width: 120%;
+    flex-wrap: wrap;
+    list-style: none;
+    border: 1px solid var(--M3-sys-light-primary, #30628C);
+    gap: 8px;
+}
+
+.otherInterestButtonContainer {
+    position: absolute;
+    width: 100%;
+    bottom: -32px;
+    display: flex;
+}
+
+.submitButtonContainer {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: var(--Spacing---Size-Space---320);
+}

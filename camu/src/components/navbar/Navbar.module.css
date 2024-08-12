@@ -39,7 +39,7 @@
     backdrop-filter: blur(2px);
 }
 
-.button {
+.button, .selectedButton {
     display: flex;
     height: 40px;
     min-width: 120px;
@@ -49,19 +49,30 @@
     gap: 8px;
     background-color: transparent;
     border: none;
+    border-radius: 100px;
     font-size: var(--M3-label-large);
     font-weight: 500;
     line-height: 20px;
     color: var(--M3-sys-light-primary);
+    transition: background-color 0.3s ease-in-out;
 }
 
 .button:last-child {
-    border-radius: 100px;
     margin-right: 0;
     border: 1px solid var(--M3-sys-light-outline, #72777F);
 }
 
 .button:hover {
+    cursor: pointer;
+    background: var(--m-3-state-layers-light-primary-opacity-012);
+}
+
+.selectedButton {
+    background: var(--m-3-state-layers-light-primary-opacity-012);
+    border-radius: 100px;
+}
+
+.selectedButton:hover {
     cursor: pointer;
 }
 

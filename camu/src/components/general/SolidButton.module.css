@@ -1,0 +1,27 @@
+.solidButton {
+    height: 48px;
+    min-width: 160px;
+    width: 30%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 100px;
+    background: var(--M3-key-colors-primary);
+    border: none;
+    color: var(--M3-sys-light-on-primary);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+}
+
+.solidButton:hover {
+    cursor: pointer;
+}
+
+.contents {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
