@@ -29,7 +29,7 @@ export default forwardRef(function ContactPage(props, ref) {
                                 Talk to our advisor to see if Camu Design fits you!
                             </h4>
                         </section>
-                        <section className={styles.rightContainer}>
+                        <section className={styles.formContainer}>
                             <ContactForm />
                         </section>
                     </section>
