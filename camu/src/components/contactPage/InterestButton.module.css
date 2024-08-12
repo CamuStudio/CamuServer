@@ -1,0 +1,19 @@
+/* Can't find reference from Figma, to be updated. */
+
+.button, .selectedButton {
+    /*display: flex;*/
+    color: var(--M3-sys-light-on-surface-variant);
+    background: none;
+    padding: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid var(--M3-sys-light-on-surface-variant);
+    transition: all 0.3s ease-in-out;
+}
+
+.selectedButton {
+    border: 1px solid transparent;
+    background: var(--Schemes-Secondary-Container);
+    transition: all 0.3s ease-in-out;
+}

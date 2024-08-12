@@ -3,12 +3,25 @@ import InputField from "./InputField.jsx";
 import SolidButton from "../general/SolidButton.jsx";
 import HollowButton from "../general/HollowButton.jsx";
 import {useState} from "react";
+import InterestButton from "./InterestButton.jsx";
+
+const defaultInterests = [
+    'Architectual Design',
+    'Conceptual Design',
+    '3D Modelling',
+    'Environmental Design',
+    'Industrial Design',
+    'Landscape Design',
+    'Website Design',
+]
 
 export default function ContactForm() {
 
     const [name, setName] = useState('');
     const [wechatId, setWechatId] = useState('');
     const [showInterests, setShowInterests] = useState(false);
+    const [allInterests, setAllInterests] = useState(defaultInterests);
+    const [selectedInterests, setSelectedInterests] = useState([]);
 
     /**
      * Function to handle submitting the form
@@ -17,7 +30,7 @@ export default function ContactForm() {
     function handleSubmitForm(e) {
         e.preventDefault();
         console.log('This form is submitted!');
-        console.log({name, wechatId});
+        console.log({name, wechatId, selectedInterests});
         setName('')
         setWechatId('');
     }
@@ -27,8 +40,14 @@ export default function ContactForm() {
         setShowInterests(!showInterests);
     }
 
+    function handleSelectInterest(e, interest) {
+        e.preventDefault();
+        console.log(`The interest is ${interest}!`);
+        setSelectedInterests([...selectedInterests, interest]);
+    }
+
     return (
-        <form className={styles.formContainer}>
+        <form className={showInterests ? styles.formWithInterestContainer : styles.formContainer}>
             <section className={styles.titleContainer}>
                 <h4 className={styles.title}>Send a message</h4>
                 <p className={styles.subtitle}>Camu will contact you via WeChat in 24 hours</p>
@@ -41,12 +60,18 @@ export default function ContactForm() {
                 <section className={styles.interestContainer}>
                     <h4 className={styles.interestTitle}>Interests</h4>
                     <section className={styles.interests}>
-                        <span>Architecture design</span>
-                        <span>Architecture design</span>
-                        <span>Architecture design</span>
+                        {allInterests.map((interest, index) => (
+                            <div key={index}>
+                                <InterestButton interest={interest}
+                                                onClick={(e) => handleSelectInterest(e, interest)}/>
+                            </div>
+                        ))}
+                        <div className={styles.otherInterestButtonContainer}>
+                            <InterestButton interest={'Others'} onClick={handleSelectInterest}/>
+                        </div>
                     </section>
                     <section className={styles.submitButtonContainer}>
-                        <SolidButton text={'Submit'} handleSubmit={handleSubmitForm} />
+                        <SolidButton text={'Submit'} onClick={handleSubmitForm}/>
                     </section>
                 </section>
             ) : (
