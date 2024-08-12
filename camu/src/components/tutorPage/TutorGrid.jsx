@@ -16,7 +16,7 @@ export default function TutorGrid({ tutor, blank = false, onSelectTutor }) {
       >
         {blank ? (
           <div className={styles.moreTutors}>
-            <img src="../../../public/arrow_forward.svg" alt="arrow_forward" />
+            <img src="src/assets/general/arrow_forward.svg" alt="arrow_forward" />
             <span className={styles.moreTutorInfo}>View more tutors</span>
           </div>
         ) : (
@@ -24,7 +24,7 @@ export default function TutorGrid({ tutor, blank = false, onSelectTutor }) {
             <img className={styles.image} src={imgSrc} alt="tutor1" />
             <img
               className={styles.unselectedIcon}
-              src="/public/unselected-icon.svg"
+              src="src/assets/tutors/unselected-icon.svg"
               alt="unselected-icon"
             />
           </>

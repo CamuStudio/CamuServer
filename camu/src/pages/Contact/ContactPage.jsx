@@ -6,7 +6,7 @@ import ContactForm from "../../components/contactPage/ContactForm.jsx";
 import Finished from "../../components/contactPage/Finished.jsx";
 
 
-export default forwardRef(function ContactPage(props, ref) {
+export default forwardRef(function ContactPage({onSelectSection}, ref) {
 
     const [showMessageBox, setShowMessageBox] = useState(false)
     const [showFinish, setShowFinish] = useState(false);

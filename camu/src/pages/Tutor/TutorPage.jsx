@@ -1,8 +1,8 @@
 import styles from "./TutorPage.module.css";
-import SectionTitle from "../components/SectionTitle.jsx";
-import TutorGrid from "../components/tutorPage/TutorGrid.jsx";
-import { useState } from "react";
-import TutorInfo from "../components/tutorPage/TutorInfo.jsx";
+import TutorGrid from "../../components/tutorPage/TutorGrid.jsx";
+import {forwardRef, useState} from "react";
+import TutorInfo from "../../components/tutorPage/TutorInfo.jsx";
+import SectionTitle from "../../components/general/SectionTitle.jsx";
 
 const tutors = [
   {
@@ -78,43 +78,43 @@ const tutors = [
 /**
  * The hero component containing text, contact button, and a hero image
  */
-export default function TutorPage() {
-  const [selectedTutor, setSelectedTutor] = useState(null);
+export default forwardRef(function TutorPage(props, ref) {
+    const [selectedTutor, setSelectedTutor] = useState(null);
 
-  function handleSelectTutor(tutor) {
-    setSelectedTutor(tutor);
-  }
+    function handleSelectTutor(tutor) {
+        setSelectedTutor(tutor);
+    }
 
-  // By setting the selected tutor to null, the tutor info page will be hidden.
-  function handleCloseTutorInfo() {
-    setSelectedTutor(null);
-  }
+    // By setting the selected tutor to null, the tutor info page will be hidden.
+    function handleCloseTutorInfo() {
+        setSelectedTutor(null);
+    }
 
-  return (
-    <div className={styles.container} ref={ref}>
-      <SectionTitle
-        title="Meet Our Tutors"
-        subtitle="All teachers have architectural backgrounds and advanced studies in multiple fields"
-      />
-      <section className={styles.tutorGridContainer}>
-        {tutors.map((tutor) => (
-          <TutorGrid
-            key={tutor.imgSrc}
-            tutor={tutor}
-            onSelectTutor={() => handleSelectTutor(tutor)}
-          />
-        ))}
-        <TutorGrid blank={true} tutor={{}} />
-      </section>
-      {selectedTutor && (
-        <section className={styles.tutorInfoContainer}>
-          <TutorInfo
-            tutor={selectedTutor}
-            onSelectTutor={handleSelectTutor}
-            onCloseTutorInfo={handleCloseTutorInfo}
-          />
-        </section>
-      )}
-    </div>
-  );
-}
+    return (
+        <div className={styles.container} ref={ref}>
+            <SectionTitle
+                title="Meet Our Tutors"
+                subtitle="All teachers have architectural backgrounds and advanced studies in multiple fields"
+            />
+            <section className={styles.tutorGridContainer}>
+                {tutors.map((tutor) => (
+                    <TutorGrid
+                        key={tutor.imgSrc}
+                        tutor={tutor}
+                        onSelectTutor={() => handleSelectTutor(tutor)}
+                    />
+                ))}
+                <TutorGrid blank={true} tutor={{}} />
+            </section>
+            {selectedTutor && (
+                <section className={styles.tutorInfoContainer}>
+                    <TutorInfo
+                        tutor={selectedTutor}
+                        onSelectTutor={handleSelectTutor}
+                        onCloseTutorInfo={handleCloseTutorInfo}
+                    />
+                </section>
+            )}
+        </div>
+    );
+})
