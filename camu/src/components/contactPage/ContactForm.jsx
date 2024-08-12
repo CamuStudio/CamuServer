@@ -21,7 +21,7 @@ export default function ContactForm() {
     const [wechatId, setWechatId] = useState('');
     const [showInterests, setShowInterests] = useState(false);
     const [allInterests, setAllInterests] = useState(defaultInterests);
-    const [selectedInterests, setSelectedInterests] = useState([]);
+    const [selectedInterests, setSelectedInterests] = useState(new Set());
 
     /**
      * Function to handle submitting the form
@@ -30,20 +30,41 @@ export default function ContactForm() {
     function handleSubmitForm(e) {
         e.preventDefault();
         console.log('This form is submitted!');
-        console.log({name, wechatId, selectedInterests});
+        console.log({
+            name,
+            wechatId,
+            selectedInterests: Array.from(selectedInterests)
+        });
         setName('')
         setWechatId('');
     }
 
+    /**
+     * Function to handle submitting the form
+     * @param e the click event
+     */
     function handleShowInterest(e) {
         e.preventDefault()
         setShowInterests(!showInterests);
     }
 
+    /**
+     * Function to handle selecting each interest
+     * @param e the click event
+     * @param interest the name of the interest
+     */
     function handleSelectInterest(e, interest) {
         e.preventDefault();
-        console.log(`The interest is ${interest}!`);
-        setSelectedInterests([...selectedInterests, interest]);
+
+        // remove the interest if it's already included. Otherwise, add the interest.
+        if (selectedInterests.has(interest)) {
+            setSelectedInterests(prev => {
+                prev.delete(interest);
+                return new Set(prev);
+            });
+        } else {
+            setSelectedInterests(prev => (new Set(prev)).add(interest));
+        }
     }
 
     return (
