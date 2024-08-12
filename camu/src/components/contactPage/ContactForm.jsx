@@ -68,6 +68,10 @@ export default function ContactForm() {
         }
     }
 
+    function handleAddNewInterest(newInterest) {
+        setSelectedInterests(prev => (new Set(prev)).add(newInterest));
+    }
+
     return (
         <form className={showInterests ? styles.formWithInterestContainer : styles.formContainer}>
             <section className={styles.titleContainer}>
@@ -80,7 +84,10 @@ export default function ContactForm() {
             </section>
             {showInterests ? (
                 <section className={styles.interestContainer}>
-                    <Interests interests={allInterests} onSelect={handleSelectInterest} />
+                    <Interests interests={allInterests}
+                               onSelect={handleSelectInterest}
+                               onAddNewInterest={handleAddNewInterest}
+                    />
                     <section className={styles.submitButtonContainer}>
                         <div className={name && wechatId ? styles.buttonContainer : styles.disabledButtonContainer}>
                             <SolidButton text={'Submit'} onClick={handleSubmitForm}/>
