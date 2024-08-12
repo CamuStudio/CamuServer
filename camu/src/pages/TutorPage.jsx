@@ -47,6 +47,11 @@ export default function TutorPage() {
         setSelectedTutor(tutor);
     }
 
+    // By setting the selected tutor to null, the tutor info page will be hidden.
+    function handleCloseTutorInfo() {
+        setSelectedTutor(null);
+    }
+
     return (
         <div className={styles.container}>
             <SectionTitle title='Meet Our Tutors'
@@ -63,7 +68,11 @@ export default function TutorPage() {
             </section>
             {selectedTutor && (
                 <section className={styles.tutorInfoContainer}>
-                    <TutorInfo tutor={selectedTutor} />
+                    <TutorInfo
+                        tutor={selectedTutor}
+                        onSelectTutor={handleSelectTutor}
+                        onCloseTutorInfo={handleCloseTutorInfo}
+                    />
                 </section>
             )}
         </div>

@@ -1,10 +1,18 @@
 import styles from "./TutorInfo.module.css";
-import NameCard from "./NameCard.jsx";
 
-export default function TutorInfo({tutor}) {
+/**
+ * The component of tutor information
+ * images are to be updated from Figma
+ * @param tutor the tutor object
+ */
+export default function TutorInfo({tutor, onCloseTutorInfo}) {
     return (
        <div className={styles.container}>
-           <img src="src/assets/general/plus.svg" alt="close" />
+           <img
+               src="src/assets/general/plus.svg"
+               alt="close"
+               onClick={onCloseTutorInfo}
+           />
            <section className={styles.imagesContainer}>
                <div className={styles.largeImg}>Placeholder</div>
                <div className={styles.smallImgContainer}>
