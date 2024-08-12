@@ -18,6 +18,10 @@ export default forwardRef(function ContactPage(props, ref) {
     function toggleShowFinish() {
         setShowFinish(!showFinish);
     }
+
+    function handleBackToMessage() {
+        setShowFinish(false);
+    }
   
     return (
         <main className={styles.container} ref={ref}>
@@ -37,7 +41,7 @@ export default forwardRef(function ContactPage(props, ref) {
                         </section>
                         <section className={styles.formContainer}>
                             {showFinish ? (
-                                <Finished />
+                                <Finished onBackToMessage={handleBackToMessage}/>
                             ) : (
                                 <ContactForm onShowFinish={toggleShowFinish} />
                             )}
