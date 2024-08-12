@@ -53,7 +53,7 @@
 }
 
 .unselectedIcon {
-    z-index: 1000;
+    z-index: 10;
     position: absolute;
     padding: 8px;
     right: 8px;
