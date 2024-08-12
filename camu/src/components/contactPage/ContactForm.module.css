@@ -34,6 +34,7 @@
 }
 
 .inputContainer, .buttonsContainer {
+    width: 80%;
     display: flex;
     justify-content: space-between;
     gap: var(--Spacing---Size-Space---160);
