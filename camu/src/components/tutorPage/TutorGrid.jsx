@@ -4,13 +4,13 @@ import styles from './TutorGrid.module.css';
  * An Extracted component for each tutors
  * @prop tutor the tutors object
  */
-export default function TutorGrid({tutor, blank=false}) {
+export default function TutorGrid({tutor, blank=false, onSelectTutor}) {
 
     const {imgSrc, subject, avatarSrc, name, qualification} = tutor
 
     return (
         <section className={styles.tutorGrid}>
-            <section className={tutor === {} ? styles.imageContainer : styles['blankContainer']}>
+            <section className={tutor === {} ? styles.imageContainer : styles['blankContainer']} onClick={onSelectTutor}>
                 {blank ? (
                     <div className={styles.moreTutors}>
                         <img src='../../../public/arrow_forward.svg' alt='arrow_forward'/>

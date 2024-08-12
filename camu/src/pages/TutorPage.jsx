@@ -1,6 +1,8 @@
 import styles from './TutorPage.module.css'
 import SectionTitle from "../components/SectionTitle.jsx";
 import TutorGrid from "../components/tutorPage/TutorGrid.jsx";
+import {useState} from "react";
+import TutorInfo from "../components/tutorPage/TutorInfo.jsx";
 
 const tutors = [
     {
@@ -37,6 +39,13 @@ const tutors = [
  * The hero component containing text, contact button, and a hero image
  */
 export default function TutorPage() {
+
+    const [selectedTutor, setSelectedTutor] = useState(null);
+
+    function handleSelectTutor(tutor) {
+        setSelectedTutor(tutor);
+    }
+
     return (
         <div className={styles.container}>
             <SectionTitle title='Meet Our Tutors'
@@ -44,10 +53,16 @@ export default function TutorPage() {
             />
             <section className={styles.tutorGridContainer}>
                 {tutors.map((tutor) => (
-                    <TutorGrid key={tutor.imgSrc} tutor={tutor} />
+                    <TutorGrid key={tutor.imgSrc}
+                               tutor={tutor}
+                               onSelectTutor={() => handleSelectTutor(tutor)}
+                    />
                 ))}
                 <TutorGrid blank={true} tutor={{}} />
             </section>
+            {selectedTutor && (
+                <h1>{selectedTutor.name}</h1>
+            )}
         </div>
     )
 }
