@@ -3,6 +3,7 @@ import SolidButton from "../../components/general/SolidButton.jsx";
 import {forwardRef, useState} from "react";
 import HollowButton from "../../components/general/HollowButton.jsx";
 import ContactForm from "../../components/contactPage/ContactForm.jsx";
+import Finished from "../../components/contactPage/Finished.jsx";
 
 
 export default forwardRef(function ContactPage(props, ref) {
@@ -36,7 +37,7 @@ export default forwardRef(function ContactPage(props, ref) {
                         </section>
                         <section className={styles.formContainer}>
                             {showFinish ? (
-                                <h1>Finished!!!</h1>
+                                <Finished />
                             ) : (
                                 <ContactForm onShowFinish={toggleShowFinish} />
                             )}
