@@ -43,11 +43,26 @@
     gap: var(--Spacing---Size-Space---120);
 }
 
-.smallImg {
+.selectedSmallImg, .smallImg {
     display: flex;
     width: 50px;
     height: 50px;
     border-radius: 10px;
+}
+
+.selectedSmallImg {
+    border: 2px solid #72777F;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.smallImg {
+    border: 2px transparent;
+    opacity: 0.7;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.smallImg:hover {
+    opacity: 1;
 }
 
 .infoContainer {

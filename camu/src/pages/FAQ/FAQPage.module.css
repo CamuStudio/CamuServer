@@ -23,7 +23,7 @@ main {
     padding-top: var(--Spacing---Size-Space---160);
     gap: var(--Spacing---Size-Space---160);
     flex-shrink: 0;
-    border-top: 1px solid var(--M3-sys-light-outline);
+    border-top: 1px solid rgba(114, 119, 127, 0);
 }
 
 .answer {
