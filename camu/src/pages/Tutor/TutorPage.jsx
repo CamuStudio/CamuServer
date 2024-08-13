@@ -21,6 +21,11 @@ const tutors = [
         work effectively.
       </p>
     ),
+    previewImagesSrc: [
+        'src/assets/tutors/tutor1_info_1.png',
+        'src/assets/tutors/tutor1_info_2.png',
+        'src/assets/tutors/tutor1_info_3.png',
+    ]
   },
   {
     imgSrc: "../src/assets/tutors/tutor2.png",
@@ -38,6 +43,10 @@ const tutors = [
         work effectively.
       </p>
     ),
+    previewImagesSrc: [
+      'src/assets/tutors/tutor2_info_1.png',
+      'src/assets/tutors/tutor2_info_2.png',
+    ]
   },
   {
     imgSrc: "../src/assets/tutors/tutor3.png",
@@ -55,6 +64,7 @@ const tutors = [
         work effectively.
       </p>
     ),
+    previewImagesSrc: ['src/assets/tutors/tutor3_info_1.png']
   },
   {
     imgSrc: "../src/assets/tutors/tutor4.png",
@@ -72,6 +82,7 @@ const tutors = [
         work effectively.
       </p>
     ),
+    previewImagesSrc: ['src/assets/tutors/tutor4_info_1.svg']
   },
 ];
 

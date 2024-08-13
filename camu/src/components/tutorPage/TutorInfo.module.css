@@ -26,7 +26,13 @@
     width: 100%;
     flex: 14;
     border-radius: 10px;
-    background-color: red;
+    overflow: hidden;
+}
+
+.largeImg img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .smallImgContainer {
@@ -34,16 +40,14 @@
     width: 100%;
     flex: 1;
     border-radius: 10px;
-    background-color: yellow;
     gap: var(--Spacing---Size-Space---120);
 }
 
 .smallImg {
     display: flex;
-    height: 100%;
-    min-width: 50px;
+    width: 50px;
+    height: 50px;
     border-radius: 10px;
-    background-color: orange;
 }
 
 .infoContainer {
@@ -55,4 +59,15 @@
 
 .infoContainer:first-child {
     margin-top: var(--Spacing---Size-Space---320);
+}
+
+.infoContainer:last-child {
+    color: var(--M3-sys-light-on-surface-variant, #42474E);
+    font-size: 18px;
+    line-height: 28px; /* 155.556% */
+    letter-spacing: 1.08px;
+}
+
+.infoContainer:last-child strong {
+    font-weight: 700;
 }

@@ -8,24 +8,26 @@ import NameCard from "./NameCard.jsx";
  */
 export default function TutorInfo({tutor, onCloseTutorInfo}) {
     return (
-       <div className={styles.container}>
-           <img className={styles.closeIcon}
-               src="src/assets/general/plus.svg"
-               alt="close"
-               onClick={onCloseTutorInfo}
-           />
-           <section className={styles.imagesContainer}>
-               <div className={styles.largeImg}>Placeholder</div>
-               <div className={styles.smallImgContainer}>
-                   <div className={styles.smallImg}></div>
-                   <div className={styles.smallImg}></div>
-                   <div className={styles.smallImg}></div>
-               </div>
-           </section>
-           <section className={styles.infoContainer}>
-               <NameCard tutor={tutor} />
-               <p>{tutor.description}</p>
-           </section>
-       </div>
+        <div className={styles.container}>
+            <img className={styles.closeIcon}
+                 src="src/assets/general/plus.svg"
+                 alt="close"
+                 onClick={onCloseTutorInfo}
+            />
+            <section className={styles.imagesContainer}>
+                <div className={styles.largeImg}>
+                    <img src={tutor.previewImagesSrc[0]} alt="tutor1"/>
+                </div>
+                <div className={styles.smallImgContainer}>
+                    {tutor.previewImagesSrc.map((imageSrc, index) => (
+                        <img className={styles.smallImg} key={index} src={imageSrc} alt="tutor1"/>
+                    ))}
+                </div>
+            </section>
+            <section className={styles.infoContainer}>
+                <NameCard tutor={tutor}/>
+                <p>{tutor.description}</p>
+            </section>
+        </div>
     )
 }
