@@ -4,7 +4,12 @@ import {forwardRef, useState} from "react";
 import HollowButton from "../../components/general/HollowButton.jsx";
 import ContactForm from "../../components/contactPage/ContactForm.jsx";
 import Finished from "../../components/contactPage/Finished.jsx";
+import {motion} from "framer-motion";
 
+const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+};
 
 export default forwardRef(function ContactPage({onSelectSection}, ref) {
 
@@ -26,45 +31,61 @@ export default forwardRef(function ContactPage({onSelectSection}, ref) {
     return (
         <main className={styles.container} ref={ref}>
             <div className={styles.wrapper}>
-                {showMessageBox ? (
-                    <section className={styles.messageBoxContainer}>
-                        <section className={styles.leftContainer}>
-                            <img className={styles.backArrow}
-                                 src='/src/assets/general/arrow_forward.svg'
-                                 alt='back_arrow'
-                                 onClick={toggleShowMessageBox}
-                            />
-                            <p className={styles.subtitle}>Join the club</p>
-                            <h4 className={styles.title}>
-                                Talk to our advisor to see if Camu Design fits you!
-                            </h4>
-                        </section>
-                        <section className={styles.formContainer}>
-                            {showFinish ? (
-                                <Finished onBackToMessage={handleBackToMessage}/>
-                            ) : (
-                                <ContactForm onShowFinish={toggleShowFinish} />
-                            )}
-                        </section>
-                    </section>
-                ) : (<section className={styles.topContainer}>
+                <section className={styles.topContainer}>
                     <section className={styles.leftContainer}>
+                        {showMessageBox && (
+                            <motion.img className={styles.backArrow}
+                                        src='/src/assets/general/arrow_forward.svg'
+                                        alt='back_arrow'
+                                        animate={showMessageBox ? 'visible' : 'hidden'}
+                                        variants={variants}
+                                        transition={{duration: 0.5}}
+                                        initial="hidden"
+                                        onClick={toggleShowMessageBox}
+                            />
+                        )}
                         <p className={styles.subtitle}>Join the club</p>
                         <h4 className={styles.title}>
                             Talk to our advisor to see if Camu Design fits you!
                         </h4>
-                        <section className={styles.buttonsContainer}>
+                        <motion.section
+                            className={styles.buttonsContainer}
+                            animate={showMessageBox ? 'hidden' : 'visible'}
+                            variants={variants}
+                            transition={{duration: 0.5}}
+                            initial="hidden"
+                        >
                             <SolidButton text={'Let\'s arrange a call'}/>
                             <HollowButton text={'Send a message'} onClick={toggleShowMessageBox}>
                                 <img src='/src/assets/general/arrow_forward.svg' alt='arrow_forward'/>
                             </HollowButton>
-                        </section>
+                        </motion.section>
                     </section>
-                        <section className={styles.rightContainer}>
-                            <img src='/src/assets/contact/contact.png' alt='contact'/>
-                        </section>
-                    </section>)
-                }
+                    <section
+                        className={styles.rightContainer}
+                    >
+                        <motion.div className={styles.heroImgContainer}>
+                            <motion.img
+                                src='/src/assets/contact/contact.png'
+                                alt='contact'
+                                animate={showMessageBox ? 'hidden' : 'visible'}
+                                variants={variants}
+                                transition={{duration: 0.5}}
+                                initial="hidden"
+                            />
+                        </motion.div>
+                        <motion.div
+                            className={styles.contactFormContainer}
+                            animate={showMessageBox ? 'visible' : 'hidden'}
+                            variants={variants}
+                            transition={{duration: 0.5}}
+                            initial="hidden"
+                        >
+                        <ContactForm onShowFinish={toggleShowFinish}/>
+                        </motion.div>
+                    </section>
+                </section>
+
                 <section className={styles.linksContainer}>
                     <section className={styles.linkColumn}>
                         <p className={styles.subject}>What &apos;s it for</p>

@@ -6,6 +6,10 @@
     flex: 1 0 0;
 }
 
+.tutorGrid:hover {
+    cursor: pointer;
+}
+
 .imageContainer, .blankContainer {
     border-radius: 12px;
     overflow: hidden;
