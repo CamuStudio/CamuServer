@@ -117,12 +117,11 @@ export default function ContactForm({onShowFinish}) {
                     <div className={styles.buttonContainer}>
                         <HollowButton text={'Tell us more'} onClick={handleShowInterest}>
                             <img className={styles.backIcon} src='src/assets/general/arrow_forward.svg' alt='go_back'/>
-                            {/*transform: rotate(-180deg);*/}
                             <span>Tell us more</span>
                         </HollowButton>
                     </div>
-                    <div className={name && wechatId ? styles.buttonContainer : styles.disabledButtonContainer}>
-                        <SolidButton text={'Submit'} onClick={handleSubmitForm}/>
+                    <div className={styles.buttonContainer}>
+                        <SolidButton text={'Submit'} onClick={handleSubmitForm} enabled={!!(name && wechatId)}/>
                     </div>
                 </motion.section>
             </form>

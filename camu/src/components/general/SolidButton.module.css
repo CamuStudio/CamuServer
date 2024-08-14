@@ -1,4 +1,4 @@
-.solidButton {
+.button, .disableButton {
     height: 48px;
     min-width: 160px;
     width: 30%;
@@ -17,7 +17,26 @@
     line-height: 20px; /* 142.857% */
 }
 
-.solidButton:hover {
+.disabledButton {
+    height: 48px;
+    min-width: 160px;
+    width: 30%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px 10px 16px;
+    border-radius: 100px;
+    background: rgba(128,128,128, 20%);
+    border: none;
+    color: var(--M3-sys-light-on-surface-variant);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+}
+
+.button:hover {
     cursor: pointer;
 }
 

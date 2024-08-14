@@ -1,11 +1,10 @@
 import styles from './SolidButton.module.css';
 
-export default function SolidButton({text, onClick, children}) {
+export default function SolidButton({text, onClick, enabled=true}) {
     return (
-        <button className={styles.solidButton} onClick={onClick}>
+        <button className={enabled ? styles.button : styles.disabledButton} onClick={onClick}>
             <section className={styles.contents}>
-                <span className={styles.text}>{text}</span>
-                {children}
+                <span>{text}</span>
             </section>
         </button>
     )

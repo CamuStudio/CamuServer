@@ -49,15 +49,6 @@
     width: 100%;
 }
 
-.disabledButtonContainer > * {
-    width: 100%;
-}
-
-.disabledButtonContainer {
-    filter: opacity(0.35) invert(1) grayscale(1);
-    pointer-events: none;
-}
-
 .backIcon {
     transform: rotate(-180deg);
 }
