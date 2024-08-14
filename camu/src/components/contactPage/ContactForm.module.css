@@ -42,7 +42,7 @@
 
 .buttonContainer, .disabledButtonContainer {
     max-width: 300px;
-    width: 40%;
+    width: calc(50% - 8px);
 }
 
 .buttonContainer > * {
@@ -91,6 +91,8 @@
 }
 
 .submitButtonContainer {
+    width: 70%;
+    align-self: flex-end;
     display: flex;
     justify-content: flex-end;
     padding-top: var(--Spacing---Size-Space---320);

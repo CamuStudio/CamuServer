@@ -14,8 +14,9 @@
     font-size: 18px;
 }
 
-.input:focus {
+.input:focus + .label {
     border-color: var(--M3-sys-light-primary, #30628C);
+    color: var(--M3-sys-light-primary, #30628C);
 }
 
 .label {
