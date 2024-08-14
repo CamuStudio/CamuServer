@@ -1,6 +1,16 @@
 import styles from "./TutorInfo.module.css";
 import NameCard from "./NameCard.jsx";
 import {useState} from "react";
+import {motion} from 'framer-motion';
+
+/**
+ * frame-motion variants
+ * applied when the selectedImageIndex state changes the animate prop in
+ */
+const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+};
 
 /**
  * The component of tutor information
@@ -23,9 +33,20 @@ export default function TutorInfo({tutor, onCloseTutorInfo}) {
                  onClick={onCloseTutorInfo}
             />
             <section className={styles.imagesContainer}>
-                <div className={styles.largeImg}>
-                    <img src={tutor.previewImagesSrc[selectedImageIndex]} alt="preview"/>
+                <div className={styles.largeImgContainer}>
+                    {tutor.previewImagesSrc.map((image, index) => (
+                        <motion.div
+                            className={styles.largeImg}
+                            key={index}
+                            initial="hidden"
+                            animate={selectedImageIndex === index ? 'visible' : 'hidden'}
+                            variants={variants}
+                            transition={{duration: 0.5}}
+                            style={{backgroundImage: `url(${image})`,}}
+                        />
+                    ))}
                 </div>
+
                 <div className={styles.smallImgContainer}>
                     {tutor.previewImagesSrc.map((imageSrc, index) => (
                         <img
