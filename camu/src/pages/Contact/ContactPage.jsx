@@ -13,19 +13,31 @@ const variants = {
 
 export default forwardRef(function ContactPage({onSelectSection}, ref) {
 
+    const [showHeroImg, setShowHeroImg] = useState(true);
     const [showMessageBox, setShowMessageBox] = useState(false)
     const [showFinish, setShowFinish] = useState(false);
 
-    function toggleShowMessageBox() {
-        setShowMessageBox(!showMessageBox);
+    function handleShowMessageBox() {
+        setShowMessageBox(!showMessageBox)
+        setShowHeroImg(!showHeroImg)
     }
 
-    function toggleShowFinish() {
-        setShowFinish(!showFinish);
+    function handleShowFinish() {
+        setShowFinish(!showFinish)
+        setShowMessageBox(false)
     }
 
     function handleBackToMessage() {
+        console.log("Back to message!")
         setShowFinish(false);
+        setShowHeroImg(false)
+        setShowMessageBox(true)
+    }
+
+    function handleBackToHero() {
+        setShowHeroImg(true)
+        setShowMessageBox(false)
+        setShowFinish(false)
     }
   
     return (
@@ -33,15 +45,15 @@ export default forwardRef(function ContactPage({onSelectSection}, ref) {
             <div className={styles.wrapper}>
                 <section className={styles.topContainer}>
                     <section className={styles.leftContainer}>
-                        {showMessageBox && (
+                        {(showFinish === true || showMessageBox === true) && (
                             <motion.img className={styles.backArrow}
                                         src='/src/assets/general/arrow_forward.svg'
                                         alt='back_arrow'
-                                        animate={showMessageBox ? 'visible' : 'hidden'}
+                                        animate={showMessageBox || showFinish ? 'visible' : 'hidden'}
                                         variants={variants}
                                         transition={{duration: 0.5}}
                                         initial="hidden"
-                                        onClick={toggleShowMessageBox}
+                                        onClick={handleBackToHero}
                             />
                         )}
                         <p className={styles.subtitle}>Join the club</p>
@@ -50,13 +62,13 @@ export default forwardRef(function ContactPage({onSelectSection}, ref) {
                         </h4>
                         <motion.section
                             className={styles.buttonsContainer}
-                            animate={showMessageBox ? 'hidden' : 'visible'}
+                            animate={showHeroImg ? 'visible' : 'hidden'}
                             variants={variants}
                             transition={{duration: 0.5}}
                             initial="hidden"
                         >
                             <SolidButton text={'Let\'s arrange a call'}/>
-                            <HollowButton text={'Send a message'} onClick={toggleShowMessageBox}>
+                            <HollowButton text={'Send a message'} onClick={handleShowMessageBox}>
                                 <img src='/src/assets/general/arrow_forward.svg' alt='arrow_forward'/>
                             </HollowButton>
                         </motion.section>
@@ -68,7 +80,7 @@ export default forwardRef(function ContactPage({onSelectSection}, ref) {
                             <motion.img
                                 src='/src/assets/contact/contact.png'
                                 alt='contact'
-                                animate={showMessageBox ? 'hidden' : 'visible'}
+                                animate={showHeroImg ? 'visible' : 'hidden'}
                                 variants={variants}
                                 transition={{duration: 0.5}}
                                 initial="hidden"
@@ -81,7 +93,17 @@ export default forwardRef(function ContactPage({onSelectSection}, ref) {
                             transition={{duration: 0.5}}
                             initial="hidden"
                         >
-                        <ContactForm onShowFinish={toggleShowFinish}/>
+                        <ContactForm onShowFinish={handleShowFinish}/>
+                        </motion.div>
+                        <motion.div
+                            className={styles.finishBoxContainer}
+                            animate={showFinish ? 'visible' : 'hidden'}
+                            variants={variants}
+                            transition={{duration: 0.5}}
+                            initial="hidden"
+                            style={{zIndex: showFinish ? 100 : -1}}
+                        >
+                            <Finished onBackToMessage={handleBackToMessage}/>
                         </motion.div>
                     </section>
                 </section>
