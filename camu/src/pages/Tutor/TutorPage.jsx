@@ -3,6 +3,17 @@ import TutorGrid from "../../components/tutorPage/TutorGrid.jsx";
 import {forwardRef, useState} from "react";
 import TutorInfo from "../../components/tutorPage/TutorInfo.jsx";
 import SectionTitle from "../../components/general/SectionTitle.jsx";
+import {motion} from "framer-motion";
+
+
+/**
+ * frame-motion variants
+ * applied when the selectedImageIndex state changes the animate prop in
+ */
+const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+};
 
 const tutors = [
   {
@@ -115,17 +126,24 @@ export default forwardRef(function TutorPage(props, ref) {
                         onSelectTutor={() => handleSelectTutor(tutor)}
                     />
                 ))}
-                <TutorGrid blank={true} tutor={{}} />
+                <TutorGrid blank={true}/>
             </section>
-            {selectedTutor && (
-                <section className={styles.tutorInfoContainer}>
-                    <TutorInfo
-                        tutor={selectedTutor}
-                        onSelectTutor={handleSelectTutor}
-                        onCloseTutorInfo={handleCloseTutorInfo}
-                    />
-                </section>
-            )}
+
+            <motion.div
+                className={styles.tutorInfoContainer}
+                key={'s'}
+                initial='hidden'
+                animate={selectedTutor ? 'visible' : 'hidden'}
+                variants={variants}
+                transition={{duration: 0.5}}
+                style={{zIndex: selectedTutor ? 20 : -1}}
+            >
+                <TutorInfo
+                    tutor={selectedTutor}
+                    onSelectTutor={handleSelectTutor}
+                    onCloseTutorInfo={handleCloseTutorInfo}
+                />
+            </motion.div>
         </div>
     );
 })

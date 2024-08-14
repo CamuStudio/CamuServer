@@ -33,7 +33,6 @@
     min-width: 1300px;
     width: 60%;
     height: 60%;
-    z-index: 20;
     display: flex;
     padding: var(--Spacing---Size-Space---320);
     border-radius: 24px;
