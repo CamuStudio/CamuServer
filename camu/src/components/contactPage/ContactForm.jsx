@@ -4,6 +4,7 @@ import SolidButton from "../general/SolidButton.jsx";
 import HollowButton from "../general/HollowButton.jsx";
 import {useState} from "react";
 import Interests from "./Interests.jsx";
+import {motion} from "framer-motion";
 
 const defaultInterests = [
     'Architecture Design',
@@ -14,6 +15,11 @@ const defaultInterests = [
     'Landscape Design',
     'Website Design',
 ]
+
+const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+};
 
 export default function ContactForm({onShowFinish}) {
 
@@ -82,8 +88,15 @@ export default function ContactForm({onShowFinish}) {
                     <BasicInputField name={'Name'} value={name} onChange={(e) => setName(e.target.value)}/>
                     <BasicInputField name={'WeChat ID'} value={wechatId} onChange={(e) => setWechatId(e.target.value)}/>
                 </section>
-                {showInterests ? (
-                    <section className={styles.interestContainer}>
+
+                {showInterests && (
+                    <motion.section
+                        className={styles.interestContainer}
+                        animate={showInterests ? 'visible' : 'hidden'}
+                        variants={variants}
+                        transition={{duration: 0.5}}
+                        initial="hidden"
+                    >
                         <Interests interests={defaultInterests}
                                    onSelect={handleSelectInterest}
                                    onAddNewInterest={handleAddNewInterest}
@@ -93,21 +106,25 @@ export default function ContactForm({onShowFinish}) {
                                 <SolidButton text={'Submit'} onClick={handleSubmitForm}/>
                             </div>
                         </section>
-                    </section>
-                ) : (
-                    <section className={styles.buttonsContainer}>
-                        <div className={styles.buttonContainer}>
-                            <HollowButton text={'Tell us more'} onClick={handleShowInterest}>
-                                <div className={styles.plusContainer}>
-                                    <img src='/src/assets/general/plus.svg' alt='plus'/>
-                                </div>
-                            </HollowButton>
-                        </div>
-                        <div className={name && wechatId ? styles.buttonContainer : styles.disabledButtonContainer}>
-                            <SolidButton text={'Submit'} onClick={handleSubmitForm}/>
-                        </div>
-                    </section>
+                    </motion.section>
                 )}
+                <motion.section
+                    className={styles.buttonsContainer}
+                    animate={showInterests ? 'hidden' : 'visible'}
+                    variants={variants}
+                    transition={{duration: 0.5}}
+                >
+                    <div className={styles.buttonContainer}>
+                        <HollowButton text={'Tell us more'} onClick={handleShowInterest}>
+                            <div className={styles.plusContainer}>
+                                <img src='/src/assets/general/plus.svg' alt='plus'/>
+                            </div>
+                        </HollowButton>
+                    </div>
+                    <div className={name && wechatId ? styles.buttonContainer : styles.disabledButtonContainer}>
+                        <SolidButton text={'Submit'} onClick={handleSubmitForm}/>
+                    </div>
+                </motion.section>
             </form>
         </>
     )

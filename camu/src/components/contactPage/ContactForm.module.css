@@ -41,7 +41,8 @@
 }
 
 .buttonContainer, .disabledButtonContainer {
-    width: calc(50% - 8px);
+    max-width: 300px;
+    width: 40%;
 }
 
 .buttonContainer > * {
