@@ -9,11 +9,9 @@ export default function Finished({onBackToMessage}) {
                 <h4>Congrats! Your message is sent!</h4>
                 <p>Camu will contact you via WeChat in 24 hours</p>
             </section>
-            <HollowButton
-                text={'Tell us more!'}
-                onClick={onBackToMessage}
-            >
-                <img src='src/assets/general/arrow_forward.svg' alt="go_back" />
+            <HollowButton onClick={onBackToMessage}>
+                <img className={styles.backIcon} src='src/assets/general/arrow_forward.svg' alt="go_back"/>
+                <span>Tell us more</span>
             </HollowButton>
         </div>
     )

@@ -36,7 +36,8 @@ export default forwardRef(function ServicePage(props, ref) {
                               buttonText='View ->'
                         >
                             <div style={{width: '30%', height: '40px'}}>
-                                <HollowButton text={'View'}>
+                                <HollowButton>
+                                    <span>View</span>
                                     <img src='/src/assets/general/arrow_forward.svg' alt='arrow_forward'/>
                                 </HollowButton>
                             </div>
@@ -49,7 +50,8 @@ export default forwardRef(function ServicePage(props, ref) {
                         >
                             <div style={{width:'30%', height:'40px'}}>
                                 <HollowButton text={'View'}>
-                                    <img src='/src/assets/general/arrow_forward.svg' alt='arrow_forward' />
+                                    <span>View</span>
+                                    <img src='/src/assets/general/arrow_forward.svg' alt='arrow_forward'/>
                                 </HollowButton>
                             </div>
                         </Card>

@@ -58,9 +58,8 @@
     pointer-events: none;
 }
 
-.plusContainer {
-    width: 18px;
-    height: 18px;
+.backIcon {
+    transform: rotate(-180deg);
 }
 
 .interestContainer {

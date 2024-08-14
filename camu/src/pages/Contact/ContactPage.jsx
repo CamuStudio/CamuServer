@@ -70,6 +70,7 @@ export default forwardRef(function ContactPage({onSelectSection}, ref) {
                             <SolidButton text={'Let\'s arrange a call'}/>
                             <HollowButton text={'Send a message'} onClick={handleShowMessageBox}>
                                 <img src='/src/assets/general/arrow_forward.svg' alt='arrow_forward'/>
+                                <span>Send a message</span>
                             </HollowButton>
                         </motion.section>
                     </section>
