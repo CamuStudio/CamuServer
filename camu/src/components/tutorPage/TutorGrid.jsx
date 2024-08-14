@@ -2,17 +2,17 @@ import styles from "./TutorGrid.module.css";
 import NameCard from "./NameCard.jsx";
 
 /**
- * An Extracted component for each tutors
+ * An Extracted component for each tutor
  * @prop tutor the tutors object
  */
-export default function TutorGrid({ tutor, blank = false, onSelectTutor }) {
+export default function TutorGrid({ tutor={}, blank = false, onSelectTutor }) {
   const { imgSrc, subject, avatarSrc, name, qualification } = tutor;
 
   return (
     <section className={styles.tutorGrid}>
       <section
-        className={blank ? styles.imageContainer : styles["blankContainer"]}
-        onClick={onSelectTutor}
+          className={blank ? styles["blankContainer"] : styles.imageContainer}
+          onClick={onSelectTutor}
       >
         {blank ? (
           <div className={styles.moreTutors}>
