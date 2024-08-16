@@ -10,12 +10,13 @@ const NavBar = function({onScrollToSection}) {
     return (
         <nav className={styles.navbar}>
             <div className={styles.logo}>
-                <img src='src/assets/navbar/logo.png' alt='logo'/>
+                <img src='public/logo.png' alt='logo'/>
             </div>
             <div className={styles.buttons}>
                 {navSelections.map((selection, i) => (
                     <button key={i}
-                            className={selection === selectedButton ? styles.selectedButton : styles.button}
+                            className={styles.button}
+                            style={selection === selectedButton ? {backgroundColor: 'var(--m-3-state-layers-light-primary-opacity-012)'} : {}}
                             onClick={() => {
                                 setSelectedButton(selection)
                                 onScrollToSection(selection)

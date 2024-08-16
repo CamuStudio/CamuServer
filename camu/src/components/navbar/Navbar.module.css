@@ -3,26 +3,27 @@
     position: fixed;
     z-index: 10;
     top: 0;
-    width: 82%;
-    left: 9%;
+    left: 120px;
+    display: flex;
+    width: 1200px;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
     height: 60px;
     border-radius: 99px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .logo {
     display: flex;
     justify-content: center;
     border-radius: 50%;
-    margin-left: 10px;
+    margin-left: 8px;
 }
 
 .logo img {
+    background-color: transparent;
     width: 40px;
     height: 40px;
 }
@@ -39,7 +40,7 @@
     backdrop-filter: blur(2px);
 }
 
-.button, .selectedButton {
+.button {
     display: flex;
     height: 40px;
     min-width: 120px;
@@ -67,20 +68,20 @@
     background: var(--m-3-state-layers-light-primary-opacity-012);
 }
 
-.selectedButton {
-    background: var(--m-3-state-layers-light-primary-opacity-012);
-    border-radius: 100px;
-}
-
-.selectedButton:hover {
-    cursor: pointer;
-}
-
 /*
   display for mobile (390px)
   only "Contact us" button is shown
  */
 @media only screen and (max-width: 390px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 16px;
+        width: 358px;
+        border-radius: 48px;
+        background: #FFF;
+        box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.06);
+    }
     .button:not(:last-child) {
         display: none;
     }
