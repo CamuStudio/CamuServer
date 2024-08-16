@@ -9,6 +9,15 @@
     font-weight: 700;
 }
 
+.titleContainer {
+    display: flex;
+    align-items: center;
+}
+
+.blurredContainer {
+    filter: blur(5px);
+}
+
 .container {
     display: flex;
     flex-direction: column;
