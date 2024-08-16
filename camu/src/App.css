@@ -7,19 +7,59 @@
   --text-logo: 12px;
 }
 
+/**
+  Color variables
+ */
 * {
   --color-logo: black;
-  --M3-sys-light-on-primary: white;
   --color-fill: #595959;
-  --M3-sys-light-outline: #72777F;
+  --M3-key-colors-primary: #0997EB;
+  --M3-ref-secondary-secondary95: #DCF5FF;
+  --M3-ref-tertiary-tertiary95: #FFEFD1;
+  --M3-sys-light-outline: rgba(114, 119, 127, 0.3);
   --M3-sys-light-primary: #30628C;
+  --M3-sys-light-surface: #F7F9FF;
+  --M3-sys-light-on-primary: white;
   --M3-sys-light-on-surface: #181C20;
+  --M3-sys-light-on-secondary-container: #001F27;
+  --M3-sys-light-on-surface-variant: #42474E;
+  --M3-sys-light-surface-container-highest: #FCFCFF;
+  --Main-goten: white;
+  --Schemes-Surface: #F7F9FF;
+  --Schemes-Secondary-Container: #B4EBFF;
+  --Schemes-Tertiary-Container: #FFDF96;
   --Shade-Color-700: #6D7173;
-  --M3-key-colors-primary: #0997EB
+  --m-3-state-layers-light-primary-opacity-012: rgba(48, 98, 140, 0.12)
 }
 
-.Wrapper {
+/**
+  Spacing variables (gap, padding...)
+ */
+* {
+  --Spacing---Section-Padding-Medium: 100px;
+  --Spacing---Section-Padding-Large: 120px;
+  --Spacing---Size-Space---0: 0;
+  --Spacing---Size-Space---40: 4px;
+  --Spacing---Size-Space---80: 8px;
+  --Spacing---Size-Space---120: 12px;
+  --Spacing---Size-Space---160: 16px;
+  --Spacing---Size-Space---240: 24px;
+  --Spacing---Size-Space---320: 32px;
+  --Spacing---Size-Space---480: 48px;
+  --Spacing---Size-Space---640: 64px;
+}
+
+/**
+  Corner radius variables
+ */
+* {
+  --Corner-radius-Small: 12px;
+  --Corner-radius-Large: 32px;
+}
+
+.wrapper {
   position: relative;
+  background-color: #F5F7FA;
 }
 
 .app {

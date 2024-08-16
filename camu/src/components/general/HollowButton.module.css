@@ -1,0 +1,36 @@
+.hollowButton {
+    display: flex;
+    height: 48px;
+    min-width: 120px;
+    /*width: 30%;*/
+    padding: 10px 16px 10px 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 100px;
+    background: var(--Schemes-Surface);
+    border: 1px solid rgb(114, 119, 127);
+    color: var(--M3-sys-light-primary, #30628C);
+    text-align: center;
+
+    /* M3/label/large */
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.1px;
+}
+
+.hollowButton:hover {
+    cursor: pointer;
+}
+
+.contents {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+
+

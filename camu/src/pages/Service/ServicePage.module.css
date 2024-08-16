@@ -1,0 +1,63 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: var(--Spacing---Section-Padding-Large);
+    padding-bottom: var(--Spacing---Section-Padding-Large);
+    gap: var(--Spacing---Size-Space---320, 32px);
+}
+
+.subtitle {
+    color: var(--M3-sys-light-on-surface-variant);
+    text-align: center;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.5px;
+}
+
+.cardsContainer {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.cardsContainer > * > * {
+    display: flex;
+    padding: 24px;
+    align-items: flex-end;
+    gap: 13px;
+    border-radius: var(--Corner-radius-Small, 12px);
+    box-shadow: 2px 4px 11.6px 0px rgba(45, 49, 53, 0.18);
+    background: var(--M3-sys-light-surface-container-highest, #FCFCFF);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.upperContainer, .lowerContainer {
+    width: 100%;
+    display: flex;
+    gap: 2em;
+}
+
+.evaluationCardContainer {
+    width: calc(47% - 16px);
+    background-image: url("/src/assets/services/portfolio_evaluation.svg");
+}
+
+.touringCardContainer {
+    width: calc(53% - 16px);
+    background-image: url("/src/assets/services/portfolio_touring.svg");
+}
+
+.lessonsCardContainer {
+    width: calc(53% - 16px);
+    background-image: url("/src/assets/services/lessons.svg");
+}
+
+.blogCardContainer {
+    width: calc(47% - 16px);
+    background-image: url("/src/assets/services/blog.svg");
+}
