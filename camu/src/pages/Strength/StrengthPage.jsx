@@ -33,7 +33,9 @@ export default forwardRef(function StrengthPage(props, ref) {
                 </div>
             </section>
             <section className={styles.buttonContainer}>
-                <SolidButton text='Contact us' className='solidButton'/>
+                <SolidButton>
+                    <span>Contact us</span>
+                </SolidButton>
             </section>
         </div>
     )

@@ -17,7 +17,9 @@ export default forwardRef(function ServicePage(props, ref) {
                               subtitle='One-stop service from school to career'
                               buttonText='Contact us'
                         >
-                            <SolidButton text={'Contact us'}/>
+                            <SolidButton>
+                                <span>Contact us</span>
+                            </SolidButton>
                         </Card>
                     </div>
                     <div className={styles.touringCardContainer}>
@@ -25,7 +27,9 @@ export default forwardRef(function ServicePage(props, ref) {
                               subtitle='Teachers from top schools provide review'
                               buttonText='Contact us'
                         >
-                            <SolidButton text={'Contact us'}/>
+                            <SolidButton>
+                                <span>Contact us</span>
+                            </SolidButton>
                         </Card>
                     </div>
                 </section>
