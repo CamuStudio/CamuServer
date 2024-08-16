@@ -2,6 +2,7 @@ import styles from "./TutorInfo.module.css";
 import NameCard from "./NameCard.jsx";
 import {useState} from "react";
 import {motion} from 'framer-motion';
+import SolidButton from "../general/SolidButton.jsx";
 
 /**
  * frame-motion variants
@@ -63,6 +64,10 @@ export default function TutorInfo({tutor, onCloseTutorInfo}) {
                 <section className={styles.infoContainer}>
                     <NameCard tutor={tutor}/>
                     <p>{tutor.description}</p>
+                    <SolidButton>
+                        <img src='/src/assets/general/arrow_forward.svg' alt='arrow_forward'/>
+                        <span>Talk to advisor</span>
+                    </SolidButton>
                 </section>
             </div>
         )
