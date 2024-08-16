@@ -10,7 +10,7 @@ const NavBar = function({onScrollToSection}) {
     return (
         <nav className={styles.navbar}>
             <div className={styles.logo}>
-                <img src='public/logo.png' alt='logo'/>
+                <img src='src/assets/general/logo.png' alt='logo'/>
             </div>
             <div className={styles.buttons}>
                 {navSelections.map((selection, i) => (
