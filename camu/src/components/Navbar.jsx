@@ -3,20 +3,24 @@ import {useState} from "react";
 
 const navSelections = ['Home', 'Lessons', 'Blog', 'Contact us'];
 
-export default function NavBar() {
+const NavBar = function({onScrollToSection}) {
 
     const [selectedButton, setSelectedButton] = useState('Home');
 
     return (
         <nav className={styles.navbar}>
             <div className={styles.logo}>
-                <img src='../../public/logo.png' alt='logo'/>
+                <img src='public/logo.png' alt='logo'/>
             </div>
             <div className={styles.buttons}>
                 {navSelections.map((selection, i) => (
                     <button key={i}
-                            className={selection === selectedButton ? styles.selectedButton : styles.button}
-                            onClick={() => setSelectedButton(selection)}
+                            className={styles.button}
+                            style={selection === selectedButton ? {backgroundColor: 'var(--m-3-state-layers-light-primary-opacity-012)'} : {}}
+                            onClick={() => {
+                                setSelectedButton(selection)
+                                onScrollToSection(selection)
+                            }}
                     >
                         {selection}
                     </button>
@@ -25,3 +29,5 @@ export default function NavBar() {
         </nav>
     )
 }
+
+export default NavBar;
