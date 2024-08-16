@@ -102,9 +102,9 @@ export default function ContactForm({onShowFinish}) {
                                    onAddNewInterest={handleAddNewInterest}
                         />
                         <section className={styles.submitButtonContainer}>
-                            <div className={name && wechatId ? styles.buttonContainer : styles.disabledButtonContainer}>
-                                <SolidButton text={'Submit'} onClick={handleSubmitForm}/>
-                            </div>
+                            <SolidButton onClick={handleSubmitForm} enabled={!!(name && wechatId)}>
+                                <span>Submit</span>
+                            </SolidButton>
                         </section>
                     </motion.section>
                 )}
@@ -121,7 +121,9 @@ export default function ContactForm({onShowFinish}) {
                         </HollowButton>
                     </div>
                     <div className={styles.buttonContainer}>
-                        <SolidButton text={'Submit'} onClick={handleSubmitForm} enabled={!!(name && wechatId)}/>
+                        <SolidButton onClick={handleSubmitForm} enabled={!!(name && wechatId)}>
+                            <span>Submit</span>
+                        </SolidButton>
                     </div>
                 </motion.section>
             </form>

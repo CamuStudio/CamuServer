@@ -1,39 +1,36 @@
 .container {
-    width: 80%;
     display: flex;
+    width: 1120px;
     align-items: center;
     justify-content: center;
-    gap: 32px;
+    gap: var(--Spacing---Size-Space---320);
     background-color: transparent;
 }
 
 .leftContainer {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    gap: 24px;
+    width: 544px;
+    gap: var(--Spacing---Size-Space---240);
 }
 
 .textContainer {
     display: flex;
     flex-direction: column;
     word-wrap: break-word;
+    gap: var(--Spacing---Size-Space---80);
 }
 
 .title {
     color: var(--M3-sys-light-on-surface);
     font-size: 4em;
-    font-style: normal;
     font-weight: 700;
     line-height: 72px; /* 112.5% */
-
 }
 
 .subtitle {
     color: var(--Shade-Color-700);
     font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 24px; /* 150% */
     letter-spacing: 0.5px;
 }

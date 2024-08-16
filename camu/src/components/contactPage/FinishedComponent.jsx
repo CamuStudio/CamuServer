@@ -1,7 +1,7 @@
 import styles from './Finished.module.css';
 import HollowButton from "../general/HollowButton.jsx";
 
-export default function Finished({onBackToMessage}) {
+export default function FinishedComponent({onBackToMessage}) {
     return (
         <div className={styles.container}>
             <div className={styles.image}>This is a placeholder for an image</div>

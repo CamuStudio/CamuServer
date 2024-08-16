@@ -118,7 +118,7 @@
     gap: var(--Spacing---Size-Space---240);
 }
 
-.subject, .link {
+.columnName, .link {
     color: var(--M3-sys-light-primary, #30628C);
     text-align: center;
     font-weight: 700;

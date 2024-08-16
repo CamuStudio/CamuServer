@@ -3,7 +3,7 @@ import SolidButton from "../../components/general/SolidButton.jsx";
 import {forwardRef, useState} from "react";
 import HollowButton from "../../components/general/HollowButton.jsx";
 import ContactForm from "../../components/contactPage/ContactForm.jsx";
-import Finished from "../../components/contactPage/Finished.jsx";
+import FinishedComponent from "../../components/contactPage/FinishedComponent.jsx";
 import {motion} from "framer-motion";
 
 const variants = {
@@ -76,9 +76,7 @@ export default forwardRef(function ContactPage({onSelectSection}, ref) {
                             </HollowButton>
                         </motion.section>
                     </section>
-                    <section
-                        className={styles.rightContainer}
-                    >
+                    <section className={styles.rightContainer}>
                         <motion.div className={styles.heroImgContainer}>
                             <motion.img
                                 src='/src/assets/contact/contact.png'
@@ -96,7 +94,7 @@ export default forwardRef(function ContactPage({onSelectSection}, ref) {
                             transition={{duration: 0.5}}
                             initial="hidden"
                         >
-                        <ContactForm onShowFinish={handleShowFinish}/>
+                            <ContactForm onShowFinish={handleShowFinish}/>
                         </motion.div>
                         <motion.div
                             className={styles.finishBoxContainer}
@@ -106,17 +104,15 @@ export default forwardRef(function ContactPage({onSelectSection}, ref) {
                             initial="hidden"
                             style={{zIndex: showFinish ? 100 : -1}}
                         >
-                            <Finished onBackToMessage={handleBackToMessage}/>
+                            <FinishedComponent onBackToMessage={handleBackToMessage}/>
                         </motion.div>
                     </section>
                 </section>
 
                 <section className={styles.linksContainer}>
                     <section className={styles.linkColumn}>
-                        <p className={styles.subject}>What &apos;s it for</p>
-
-                        <p className={styles.link}
-                           onClick={() => {
+                        <p className={styles.columnName}>What &apos;s it for</p>
+                        <p className={styles.link} onClick={() => {
                                onSelectSection('Service')
                            }}
                         >
@@ -142,12 +138,12 @@ export default forwardRef(function ContactPage({onSelectSection}, ref) {
                         </p>
                     </section>
                     <section className={styles.linkColumn}>
-                        <p className={styles.subject}>Resources</p>
+                        <p className={styles.columnName}>Resources</p>
                         <p className={styles.link}>Lessons</p>
                         <p className={styles.link}>Blog</p>
                     </section>
                     <section className={styles.linkColumn}>
-                        <p className={styles.subject}>Camudesign@gmail.com</p>
+                        <p className={styles.columnName}>Camudesign@gmail.com</p>
                         <p className={styles.link}>camudesign</p>
                         <p className={styles.link}>Join us</p>
                     </section>

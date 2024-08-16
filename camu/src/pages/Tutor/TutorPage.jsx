@@ -114,11 +114,13 @@ export default forwardRef(function TutorPage(props, ref) {
 
     return (
         <div className={styles.container} ref={ref}>
-            <SectionTitle
-                title="Meet Our Tutors"
-                subtitle="All teachers have architectural backgrounds and advanced studies in multiple fields"
-            />
-            <section className={styles.tutorGridContainer}>
+            <div className={selectedTutor ? styles.blurredContainer : styles.titleContainer}>
+                <SectionTitle
+                    title="Meet Our Tutors"
+                    subtitle="All teachers have architectural backgrounds and advanced studies in multiple fields"
+                />
+            </div>
+            <section className={selectedTutor ? styles.blurredContainer : styles.tutorGridContainer}>
                 {tutors.map((tutor) => (
                     <TutorGrid
                         key={tutor.imgSrc}

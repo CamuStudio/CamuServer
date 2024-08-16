@@ -1,5 +1,4 @@
 .container {
-    /*background-color: var(--M3-sys-light-surface);*/
     display: flex;
     flex-direction: column;
     justify-content: center;

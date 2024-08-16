@@ -42,8 +42,8 @@ const questionsAndAnswers = [
  */
 export default forwardRef(function FAQPage(props, ref) {
     return (
-        <main>
-            <div className={styles.container} ref={ref}>
+        <main ref={ref}>
+            <div className={styles.container}>
                 <SectionTitle
                     title='FAQs'
                     subtitle='All your questions answered.'
