@@ -1,5 +1,5 @@
-.hero {
-    width: 80%;
+.container {
+    width: 1120px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,7 +9,7 @@
 .leftContainer {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 544px;
     gap: 24px;
 }
 
@@ -37,6 +37,16 @@
     letter-spacing: 0.5px;
 }
 
+.buttonContainer {
+    display: flex;
+    height: 48px;
+    min-width: 160px;
+    width: 30%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .rightContainer {
     display: flex;
     width: 50%;
@@ -53,7 +63,33 @@
   only "Contact us" button is shown
  */
 @media only screen and (max-width: 390px) {
-    .button:not(:last-child) {
-        display: none;
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 358px;
+    }
+
+    .container > * {
+        width: 100%;
+    }
+
+    .title {
+        color: var(--M3-sys-light-on-surface, #181C20);
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 44px; /* 122.222% */
+    }
+
+    .subtitle {
+        color: var(--Shade-Color-700, #6D7173);
+        font-size: 14px;
+        line-height: 20px; /* 142.857% */
+        letter-spacing: 0.25px;
+    }
+
+    .buttonContainer {
+        display: flex;
+        width: 358px;
     }
 }

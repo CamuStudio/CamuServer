@@ -6,14 +6,16 @@ import Button from "./Button.jsx";
  */
 export default function Hero() {
     return (
-        <main className={styles.hero}>
+        <main className={styles.container}>
             <section className={styles.leftContainer}>
                 <div className={styles.textContainer}>
                     <h1 className={styles.title}>Curate your own creative career</h1>
                     <p className={styles.subtitle}>{`Let's become close friends as we move 
                 forward together, not just teacher and student working toward a goal.`}</p>
                 </div>
-                <Button text={'Contact us'}/>
+                <div className={styles.buttonContainer}>
+                    <Button text={'Contact us'}/>
+                </div>
             </section>
             <section className={styles.rightContainer}>
                 <img src='../../public/hero.png' alt='hero'/>
