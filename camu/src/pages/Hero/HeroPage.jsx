@@ -1,11 +1,10 @@
-import styles from './HeroPage.module.css'
-import SolidButton from "../../components/general/SolidButton.jsx";
-import {forwardRef} from "react";
+import styles from './Hero.module.css'
+import Button from "./Button.jsx";
 
 /**
  * The hero component containing text, contact button, and a hero image
  */
-export default forwardRef(function HeroPage() {
+export default function Hero() {
     return (
         <main className={styles.container}>
             <section className={styles.leftContainer}>
@@ -14,13 +13,13 @@ export default forwardRef(function HeroPage() {
                     <p className={styles.subtitle}>{`Let's become close friends as we move 
                 forward together, not just teacher and student working toward a goal.`}</p>
                 </div>
-                <SolidButton>
-                    <span>Contact us</span>
-                </SolidButton>
+                <div className={styles.buttonContainer}>
+                    <Button text={'Contact us'}/>
+                </div>
             </section>
             <section className={styles.rightContainer}>
-                <img src='/src/assets/hero/hero.png' alt='hero'/>
+                <img src='../../public/hero.png' alt='hero'/>
             </section>
         </main>
     )
-})
+}
