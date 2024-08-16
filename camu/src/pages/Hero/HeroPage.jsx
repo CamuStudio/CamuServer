@@ -1,5 +1,5 @@
-import styles from './Hero.module.css'
-import Button from "./Button.jsx";
+import styles from './HeroPage.module.css'
+import SolidButton from "../../components/general/SolidButton.jsx";
 
 /**
  * The hero component containing text, contact button, and a hero image
@@ -14,11 +14,13 @@ export default function Hero() {
                 forward together, not just teacher and student working toward a goal.`}</p>
                 </div>
                 <div className={styles.buttonContainer}>
-                    <Button text={'Contact us'}/>
+                    <SolidButton>
+                        <span>Contact us</span>
+                    </SolidButton>
                 </div>
             </section>
             <section className={styles.rightContainer}>
-                <img src='../../public/hero.png' alt='hero'/>
+                <img src='src/assets/hero/hero.png' alt='hero'/>
             </section>
         </main>
     )
