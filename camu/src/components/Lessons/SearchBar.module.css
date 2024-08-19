@@ -1,0 +1,26 @@
+.container {
+    width: 100%;
+    display: flex;
+    padding: 4px;
+    align-items: center;
+    gap: 4px;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.container img {
+    padding: 8px;
+}
+
+.container input {
+    width: 100%;
+    gap: 10px;
+    border: none;
+    background: transparent;
+    color: var(--M3-sys-light-on-surface-variant, #42474E);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.5px;
+}
