@@ -7,14 +7,16 @@
     align-items: center;
     gap: 8px;
     padding: 10px 16px 10px 16px;
-    border-radius: 100px;
-    background: var(--M3-key-colors-primary);
+    border-radius: var(--Spacing---Section-Padding-Medium, 100px);
+    background: var(--M3-key-colors-primary, #0997EB);
     border: none;
     color: var(--M3-sys-light-on-primary);
     text-align: center;
     font-size: 14px;
     font-weight: 500;
     line-height: 20px; /* 142.857% */
+    /*box-shadow: 0 -1px 8px -2px var(--Schemes-Secondary-Container, #B4EBFF), 0 1px 32px 4px var(--Schemes-Inverse-Primary, #9CCBFB);*/
+    transition: box-shadow 300ms ease-out;
 }
 
 .disabledButton {
@@ -39,7 +41,8 @@
 /* Not sure */
 .button:hover {
     cursor: pointer;
-    box-shadow: 0 1px 2px 1px var(--Shade-Color-700);
+    box-shadow: 0 -1px 0 -2px var(--Schemes-Secondary-Container, #B4EBFF), 0 1px 8px 3px var(--Schemes-Inverse-Primary, #9CCBFB);
+    transition: box-shadow 300ms ease-out;
 }
 
 .contents {

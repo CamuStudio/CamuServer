@@ -5,8 +5,7 @@ import NameCard from "./NameCard.jsx";
  * An Extracted component for each tutor
  * @prop tutor the tutors object
  */
-export default function TutorGrid({ tutor={}, blank = false, onSelectTutor }) {
-  const { imgSrc, subject, avatarSrc, name, qualification } = tutor;
+export default function TutorGrid({tutor={}, blank = false, onSelectTutor }) {
 
   return (
     <section className={styles.tutorGrid}>
@@ -21,7 +20,7 @@ export default function TutorGrid({ tutor={}, blank = false, onSelectTutor }) {
           </div>
         ) : (
           <>
-            <img className={styles.image} src={imgSrc} alt="tutor1" />
+            <img className={styles.image} src={tutor.imgSrc} alt="tutor1" />
             <img
               className={styles.unselectedIcon}
               src="src/assets/tutors/unselected-icon.svg"

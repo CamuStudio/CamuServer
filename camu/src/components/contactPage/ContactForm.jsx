@@ -116,7 +116,7 @@ export default function ContactForm({onShowFinish}) {
                 >
                     <div className={styles.buttonContainer}>
                         <HollowButton text={'Tell us more'} onClick={handleShowInterest}>
-                            <img className={styles.backIcon} src='src/assets/general/arrow_forward.svg' alt='go_back'/>
+                            <img className={styles.backIcon} src='src/assets/general/plus_blue.svg' alt='go_back'/>
                             <span>Tell us more</span>
                         </HollowButton>
                     </div>

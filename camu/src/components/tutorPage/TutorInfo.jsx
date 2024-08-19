@@ -65,7 +65,7 @@ export default function TutorInfo({tutor, onCloseTutorInfo}) {
                     <NameCard tutor={tutor}/>
                     <p>{tutor.description}</p>
                     <SolidButton>
-                        <img src='/src/assets/general/arrow_forward.svg' alt='arrow_forward'/>
+                        <img src='/src/assets/general/arrow_forward_white.svg' alt='arrow_forward'/>
                         <span>Talk to advisor</span>
                     </SolidButton>
                 </section>
