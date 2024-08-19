@@ -9,9 +9,9 @@ const navSelections = [
     {'name': 'Contact us', 'linkTo': '/',}
 ];
 
-const NavBar = function({onScrollToSection}) {
+const NavBar = function({onScrollToSection, defaultSelection}) {
 
-    const [selectedButton, setSelectedButton] = useState('Home');
+    const [selectedButton, setSelectedButton] = useState(defaultSelection);
 
     return (
         <nav className={styles.navbar}>

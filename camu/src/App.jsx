@@ -53,7 +53,7 @@ function App() {
 
     return (
         <div className="wrapper">
-            <NavBar onScrollToSection={handleScrollToSection} />
+            <NavBar onScrollToSection={handleScrollToSection} defaultSelection='Home'/>
             {/*<div className='app'>*/}
             {/*    */}
             {/*</div>*/}
