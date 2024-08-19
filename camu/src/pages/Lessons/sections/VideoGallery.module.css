@@ -1,0 +1,115 @@
+.container {
+    display: flex;
+    padding: 0 var(--Spacing---Size-Space---480, 48px);
+    flex-direction: column;
+    align-items: center;
+    gap: var(--Spacing---Section-Padding-Large, 120px);
+    align-self: stretch;
+    min-height: 100vh;
+}
+
+.latestVideosContainer {
+    display: flex;
+    width: 1120px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--Spacing---Size-Space---640, 64px);
+}
+
+.latestVideosContainer h4 {
+    color: #1E1E1E;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 36px; /* 128.571% */
+    letter-spacing: -0.56px;
+}
+
+.latestVideoContainer {
+    display: flex;
+    width: 100%;
+    gap: 24px;
+    /*flex-direction: column;*/
+    align-items: flex-start;
+    align-self: stretch;
+    border-radius: 24px;
+    background: #F4F4F4;
+}
+
+.videoPreview {
+    height: 100%;
+    display: flex;
+    padding: 16px;
+    /*height: 408px;*/
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex: 1 0 0;
+    border-radius: var(--Corner-radius-Small, 12px);
+}
+
+.videoPreview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.intro {
+    display: flex;
+    width: 436px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 24px;
+    padding-bottom: 24px;
+    align-self: stretch;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+}
+
+.description h3 {
+    color: var(--M3-sys-light-on-surface, #181C20);
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 36px; /* 128.571% */
+}
+
+.tagsContainer {
+    display: flex;
+    gap: var(--Spacing---Size-Space---80, 8px);
+    align-items: center;
+}
+
+.tag {
+    display: flex;
+    padding: 6px var(--Spacing---Size-Space---120, 12px);
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    background-color: var(--m-3-state-layers-light-primary-opacity-012);
+    color: var(--M3-sys-light-on-surface-variant, #42474E);
+    text-align: center;
+    border-radius: 99px;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.1px;
+}
+
+
+.date {
+    color: #1E1E1E;
+
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.35px;
+}
