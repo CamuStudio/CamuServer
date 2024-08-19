@@ -19,12 +19,15 @@
   --M3-sys-light-outline: rgba(114, 119, 127, 0.3);
   --M3-sys-light-primary: #30628C;
   --M3-sys-light-surface: #F7F9FF;
+  --M3-sys-light-secondary-fixed-dim: #87D1EA;
   --M3-sys-light-on-primary: white;
   --M3-sys-light-on-surface: #181C20;
   --M3-sys-light-on-secondary-container: #001F27;
   --M3-sys-light-on-surface-variant: #42474E;
   --M3-sys-light-surface-container-highest: #FCFCFF;
   --Main-goten: white;
+  --Schemes-Primary-Container: #CFE5FF;
+  --Schemes-On-Primary: #FFF;
   --Schemes-Surface: #F7F9FF;
   --Schemes-Secondary-Container: #B4EBFF;
   --Schemes-Tertiary-Container: #FFDF96;
@@ -36,6 +39,7 @@
   Spacing variables (gap, padding...)
  */
 * {
+  --Spacing---Section-Padding-Small: 80px;
   --Spacing---Section-Padding-Medium: 100px;
   --Spacing---Section-Padding-Large: 120px;
   --Spacing---Size-Space---0: 0;
@@ -43,6 +47,7 @@
   --Spacing---Size-Space---80: 8px;
   --Spacing---Size-Space---120: 12px;
   --Spacing---Size-Space---160: 16px;
+  --Spacing---Size-Space---200: 20px;
   --Spacing---Size-Space---240: 24px;
   --Spacing---Size-Space---320: 32px;
   --Spacing---Size-Space---480: 48px;
