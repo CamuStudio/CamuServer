@@ -40,6 +40,16 @@
     backdrop-filter: blur(2px);
 }
 
+.link {
+    text-decoration: none;
+}
+
+.link:last-child {
+    margin-right: 0;
+    border-radius: 100px;
+    border: 1px solid var(--M3-sys-light-outline, #72777F);
+}
+
 .button {
     display: flex;
     height: 40px;
@@ -56,11 +66,6 @@
     line-height: 20px;
     color: var(--M3-sys-light-primary);
     transition: background-color 0.3s ease-in-out;
-}
-
-.button:last-child {
-    margin-right: 0;
-    border: 1px solid var(--M3-sys-light-outline, #72777F);
 }
 
 .button:hover {
