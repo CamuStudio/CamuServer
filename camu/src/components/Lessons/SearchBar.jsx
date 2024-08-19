@@ -1,14 +1,39 @@
 import styles from './SearchBar.module.css';
+import {useState} from "react";
 
 export default function SearchBar() {
+
+    const [searchText, setSearchText] = useState('')
+
+    /**
+     * Function that handles submitting the search text
+     * Submit an object with searchText, and then set the searchText back to default.
+     * @param e submit event (hitting enter button)
+     */
+    function handleSubmit(e) {
+        e.preventDefault()
+        const searchTerm = {'searchTerm': searchText};
+        console.log(searchTerm)
+        setSearchText('')
+    }
+
     return (
         <div className={styles.container}>
             <img src='src/assets/Lessons/lessonHero/search.svg' alt='Search'/>
-            <input
-                type='text'
-                placeholder='Search all lessons'
+            <form onSubmit={handleSubmit}>
+                <input
+                    type='text'
+                    placeholder='Search all lessons'
+                    value={searchText}
+                    onChange={(e) => {
+                        setSearchText(e.target.value)
+                    }}
+                />
+            </form>
+            <img src='src/assets/Lessons/lessonHero/cancel.svg'
+                 alt='Cancel'
+                 onClick={() => setSearchText('')}
             />
-            <img src='src/assets/Lessons/lessonHero/cancel.svg' alt='Cancel'/>
         </div>
     )
 }
