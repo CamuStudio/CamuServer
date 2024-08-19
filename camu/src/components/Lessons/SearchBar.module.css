@@ -8,8 +8,15 @@
     align-self: stretch;
 }
 
-.container img {
-    padding: 8px;
+.iconContainer {
+    display: flex;
+    border-radius: 50%;
+    background-color: transparent;
+    padding: var(--Spacing---Size-Space---80);
+}
+
+.iconContainer:hover {
+    background-color: rgba(128, 128, 128, 0.2);
 }
 
 form {

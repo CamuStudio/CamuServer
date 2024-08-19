@@ -19,7 +19,10 @@ export default function SearchBar() {
 
     return (
         <div className={styles.container}>
-            <img src='src/assets/Lessons/lessonHero/search.svg' alt='Search'/>
+            <div className={styles.iconContainer}
+                 onClick={handleSubmit}>
+                <img src='src/assets/Lessons/lessonHero/search.svg' alt='Search'/>
+            </div>
             <form onSubmit={handleSubmit}>
                 <input
                     type='text'
@@ -30,10 +33,10 @@ export default function SearchBar() {
                     }}
                 />
             </form>
-            <img src='src/assets/Lessons/lessonHero/cancel.svg'
-                 alt='Cancel'
-                 onClick={() => setSearchText('')}
-            />
+            <div className={styles.iconContainer}
+                 onClick={() => setSearchText('')}>
+                <img src='src/assets/Lessons/lessonHero/cancel.svg' alt='Cancel'/>
+            </div>
         </div>
     )
 }
