@@ -32,48 +32,52 @@ const brandImages = [
  */
 export default function Hero() {
     return (
-        <main className={styles.container}>
-            <div className={styles.heroContainer}>
-                <section className={styles.tutorsContainer}>
-                    <div className={styles.introContainer}>
-                        <span>👋  → You + Our Tutors → Rocket Portfolio  🚀</span>
-                    </div>
-                    <div className={styles.tutorIconsContainer}>
-                        {tutorAvatars.map((imgSrc, index) => (
-                            <div key={index} className={styles.tutorIconContainer}>
-                                <img src={imgSrc} alt='tutor'/>
+        <main className={styles.wrapper}>
+            <div className={styles.container}>
+                <div className={styles.heroContainer}>
+                    <section className={styles.tutorsContainer}>
+                        <div className={styles.introContainer}>
+                            <span>👋  → You + Our Tutors → Rocket Portfolio  🚀</span>
+                        </div>
+                        <div className={styles.tutorIconsContainer}>
+                            {tutorAvatars.map((imgSrc, index) => (
+                                <div key={index} className={styles.tutorIconContainer}>
+                                    <img src={imgSrc} alt='tutor'/>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+                    <section className={styles.textContainer}>
+                        <h1 className={styles.title}>Your Ultimate Creative Partner for Innovative Architectural
+                            Designs</h1>
+                        <h5 className={styles.subtitle}>Expertly crafted design solutions tailored to your vision and
+                            budget, ensuring you stay ahead in a dynamic market.</h5>
+                    </section>
+                    <section className={styles.buttonContainer}>
+                        <SolidButton>
+                            <span>Let&apos;s talk</span>
+                        </SolidButton>
+                    </section>
+                </div>
+                <div className={styles.bottomContainer}>
+                    <section className={styles.imagesContainer}>
+                        {portfolioImages.map((imgSrc, index) => (
+                            <div key={index} className={styles.imageContainer}>
+                                <img src={imgSrc} alt={imgSrc}/>
                             </div>
                         ))}
-                    </div>
-                </section>
-                <section className={styles.textContainer}>
-                    <h1 className={styles.title}>Your Ultimate Creative Partner for Innovative Architectural Designs</h1>
-                    <h5 className={styles.subtitle}>Expertly crafted design solutions tailored to your vision and budget, ensuring you stay ahead in a dynamic market.</h5>
-                </section>
-                <section className={styles.buttonContainer}>
-                    <SolidButton>
-                        <span>Let&apos;s talk</span>
-                    </SolidButton>
-                </section>
-            </div>
-            <div className={styles.bottomContainer}>
-                <section className={styles.imagesContainer}>
-                    {portfolioImages.map((imgSrc, index) => (
-                        <div key={index} className={styles.imageContainer}>
-                            <img src={imgSrc} alt={imgSrc} />
+                    </section>
+                    <section className={styles.studentsSourceContainer}>
+                        <div className={styles.studentsFromContainer}>
+                            <span>Students from</span>
                         </div>
-                    ))}
-                </section>
-                <section className={styles.studentsSourceContainer}>
-                    <div className={styles.studentsFromContainer}>
-                        <span>Students from</span>
-                    </div>
-                    <div className={styles.brandsContainer}>
-                        {brandImages.map((imgSrc, index) => (
-                            <img key={index} src={imgSrc} alt={imgSrc} />
-                        ))}
-                    </div>
-                </section>
+                        <div className={styles.brandsContainer}>
+                            {brandImages.map((imgSrc, index) => (
+                                <img key={index} src={imgSrc} alt={imgSrc}/>
+                            ))}
+                        </div>
+                    </section>
+                </div>
             </div>
         </main>
     )

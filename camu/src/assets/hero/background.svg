@@ -1,20 +1,21 @@
-<svg width="1476" height="980" viewBox="0 0 1476 980" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_d_1531_15095)">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M1458 872.6L1377.6 890.478C1298.4 908.357 1137.6 944.114 978 950.074C818.4 956.033 657.6 932.195 498 908.357C338.4 884.519 177.6 860.681 98.3999 848.762L18 836.843L18.0001 6.5L98.4 6.5C177.6 6.50001 338.4 6.50002 498 6.50004C657.6 6.50005 818.4 6.50007 978 6.50008C1137.6 6.50009 1298.4 6.50011 1377.6 6.50012L1458 6.50012L1458 872.6Z" fill="url(#paint0_linear_1531_15095)"/>
-</g>
-<defs>
-<filter id="filter0_d_1531_15095" x="0.9" y="0.4" width="1474.2" height="978.7" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="11"/>
-<feGaussianBlur stdDeviation="8.55"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.319743 0 0 0 0 0.5 0 0 0 0.08 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1531_15095"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1531_15095" result="shape"/>
-</filter>
-<linearGradient id="paint0_linear_1531_15095" x1="-1098.5" y1="1228.34" x2="436.592" y2="-866.606" gradientUnits="userSpaceOnUse">
-<stop offset="0.270115" stop-color="#FAF5E9"/>
-<stop offset="0.75517" stop-color="#DFECFA"/>
-</linearGradient>
-</defs>
+<!-- sample rectangle -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1476" height="980" viewBox="20 10 1476 980" fill="none">
+  <g filter="url(#filter0_d_1531_15095)">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M1458 872.6L1377.6 890.478C1298.4 908.357 1137.6 944.114 978 950.074C818.4 956.033 657.6 932.195 498 908.357C338.4 884.519 177.6 860.681 98.3999 848.762L18 836.843L18.0001 6.5L98.4 6.5C177.6 6.50001 338.4 6.50002 498 6.50004C657.6 6.50005 818.4 6.50007 978 6.50008C1137.6 6.50009 1298.4 6.50011 1377.6 6.50012L1458 6.50012L1458 872.6Z" fill="url(#paint0_linear_1531_15095)"/>
+  </g>
+  <defs>
+    <filter id="filter0_d_1531_15095" x="0.9" y="0.4" width="1474.2" height="978.7" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="11"/>
+      <feGaussianBlur stdDeviation="8.55"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.319743 0 0 0 0 0.5 0 0 0 0.08 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1531_15095"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1531_15095" result="shape"/>
+    </filter>
+    <linearGradient id="paint0_linear_1531_15095" x1="-1098.5" y1="1228.34" x2="436.592" y2="-866.606" gradientUnits="userSpaceOnUse">
+      <stop offset="0.270115" stop-color="#FAF5E9"/>
+      <stop offset="0.75517" stop-color="#DFECFA"/>
+    </linearGradient>
+  </defs>
 </svg>
