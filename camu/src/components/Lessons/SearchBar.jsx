@@ -1,7 +1,7 @@
 import styles from './SearchBar.module.css';
 import {useState} from "react";
 
-export default function SearchBar() {
+export default function SearchBar({style = {}, hasClearButton = true}) {
 
     const [searchText, setSearchText] = useState('')
 
@@ -18,10 +18,10 @@ export default function SearchBar() {
     }
 
     return (
-        <div className={styles.container}>
+        <div style={style} className={styles.container}>
             <div className={styles.iconContainer}
                  onClick={handleSubmit}>
-                <img src='src/assets/Lessons/lessonHero/search.svg' alt='Search'/>
+                <img src='src/assets/general/search.svg' alt='Search'/>
             </div>
             <form onSubmit={handleSubmit}>
                 <input
@@ -33,10 +33,13 @@ export default function SearchBar() {
                     }}
                 />
             </form>
-            <div className={styles.iconContainer}
-                 onClick={() => setSearchText('')}>
-                <img src='src/assets/Lessons/lessonHero/cancel.svg' alt='Cancel'/>
-            </div>
+            {hasClearButton && (
+                    <div className={styles.iconContainer}
+                         onClick={() => setSearchText('')}>
+                        <img src='src/assets/Lessons/lessonHero/cancel.svg' alt='Cancel'/>
+                    </div>
+                )
+            }
         </div>
     )
 }
