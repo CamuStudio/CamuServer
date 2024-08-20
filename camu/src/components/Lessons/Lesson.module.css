@@ -11,17 +11,60 @@
     height: 240px;
     justify-content: center;
     align-items: center;
+    position: relative;
     border-radius: 12px;
     background: #D9D9D9;
     overflow: hidden;
-    /* Enable */
-    /*box-shadow: 2px 4px 12px var(--Spacing---Size-Space---40, 4px) rgba(45, 49, 53, 0.04);*/
 }
 
-.imageContainer img {
+.previewImage {
     height: 100%;
     width: 100%;
     object-fit: contain;
+}
+
+.lessonLengthContainer {
+    display: flex;
+    padding: var(--Spacing---Size-Space---40, 4px) var(--Spacing---Size-Space---80, 8px);
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    border-radius: var(--Spacing---Size-Space---120, 12px);
+    background: #595959;
+}
+
+.lessonLengthContainer p {
+    color: var(--Main-goten, #FFF);
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+}
+
+.playIcon {
+    position: absolute;
+    top: calc(50% - 23px);
+    left: calc(50% - 18px);
+    flex-shrink: 0;
+    fill: rgba(227, 243, 252, 0.60);
+    opacity: 0;
+    /*backdrop-filter: blur(2px);*/
+}
+
+.imageContainer:hover {
+    border-radius: 24px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.40) 100%), #D9D9D9;
+    box-shadow: 2px 4px 24px 4px rgba(45, 49, 53, 0.20);
+    transition: all 0.3s ease-in-out;
+}
+
+.imageContainer:hover .playIcon {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .moduleContainer {

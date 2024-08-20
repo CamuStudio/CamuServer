@@ -8,7 +8,11 @@ export default function Lesson({lesson}) {
     return (
         <div className={styles.container}>
             <section className={styles.imageContainer}>
-                <img src={previewImgSrc} alt={title} />
+                <img className={styles.previewImage} src={previewImgSrc} alt={title}/>
+                <section className={styles.lessonLengthContainer}>
+                    <p>{`24:34`}</p>
+                </section>
+                <img className={styles.playIcon} src='src/assets/Lessons/lessonsGallery/play_arrow.svg' alt='play'/>
             </section>
             <section className={styles.moduleContainer}>
                 <div className={styles.titleContainer}>
