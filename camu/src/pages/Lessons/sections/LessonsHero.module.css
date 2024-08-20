@@ -16,10 +16,23 @@
     display: flex;
     width: 736px;
     height: 208px;
+    position: relative;
     flex-direction: column;
     align-items: center;
     gap: var(--Spacing---Size-Space---240, 24px);
     flex-shrink: 0;
+}
+
+.rectangle {
+    width: 408px;
+    height: 73px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 4px;
+    opacity: 0.4;
+    background: linear-gradient(90deg, #0095E9 0%, rgba(0, 149, 233, 0.00) 100%);
+    z-index: 1;
 }
 
 .textContainer {
@@ -28,6 +41,7 @@
     align-items: center;
     gap: 8px;
     align-self: stretch;
+    z-index: 2;
 }
 
 .title {

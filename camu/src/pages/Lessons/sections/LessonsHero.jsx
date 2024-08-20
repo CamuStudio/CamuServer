@@ -10,6 +10,8 @@ export default function LessonsHero() {
                     <h5 className={styles.subtitle}>Join SuperHi 50,000+ learners worldwide and gain technical
                         skills through our practical courses.</h5>
                 </section>
+                <section className={styles.rectangle}>
+                </section>
             </div>
             <div className={styles.searchBarContainer}>
                 <SearchBar />
