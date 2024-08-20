@@ -1,23 +1,6 @@
 import styles from './LessonsGallery.module.css'
 import Lesson from "../../../components/Lessons/Lesson.jsx";
-
-const latestLessons = [
-    {
-        previewImgSrc: 'src/assets/Lessons/lessonsGallery/latest_lesson_1.png',
-        title: 'What services do you offer?',
-        tags: ['Render', 'Render', 'Render']
-    },
-    {
-        previewImgSrc: 'src/assets/Lessons/lessonsGallery/latest_lesson_2.png',
-        title: 'What services do you offer?',
-        tags: ['Render', 'Render', 'Render']
-    },
-    {
-        previewImgSrc: 'src/assets/Lessons/lessonsGallery/latest_lesson_3.png',
-        title: 'What services do you offer?',
-        tags: ['Render', 'Render', 'Render']
-    }
-]
+import {latestLessons, topLatestLesson} from "../../../utils/dummyData.js";
 
 export default function LessonsGallery() {
     return (
@@ -30,15 +13,15 @@ export default function LessonsGallery() {
                     </div>
                     <div className={styles.intro}>
                         <div className={styles.description}>
-                            <h3>Gain technical skills through learning stuff</h3>
+                            <h3>{topLatestLesson.title}</h3>
                         </div>
                         <div className={styles.tagsContainer}>
-                            <div className={styles.tag}>Render</div>
-                            <div className={styles.tag}>Render</div>
-                            <div className={styles.tag}>Render</div>
+                            {topLatestLesson.tags.map((tag, index) => (
+                                <div key={index} className={styles.tag}>Render</div>
+                            ))}
                         </div>
                         <div className={styles.date}>
-                            <p>June 7, 2024</p>
+                            <p>{topLatestLesson.date}</p>
                         </div>
                     </div>
                 </div>
