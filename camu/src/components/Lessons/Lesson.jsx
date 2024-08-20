@@ -3,14 +3,14 @@ import {useState} from "react";
 
 export default function Lesson({lesson}) {
 
-    const {previewImgSrc, title, tags} = lesson;
+    const {previewImgSrc, title, tags, length} = lesson;
 
     return (
         <div className={styles.container}>
             <section className={styles.imageContainer}>
                 <img className={styles.previewImage} src={previewImgSrc} alt={title}/>
                 <section className={styles.lessonLengthContainer}>
-                    <p>{`24:34`}</p>
+                    <p>{length}</p>
                 </section>
                 <img className={styles.playIcon} src='src/assets/Lessons/lessonsGallery/play_arrow.svg' alt='play'/>
             </section>
