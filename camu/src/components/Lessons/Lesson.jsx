@@ -1,53 +1,34 @@
 import styles from './Lesson.module.css';
 import {useState} from "react";
-import {motion} from "framer-motion";
+import LessonTitle from "./Lesson/LessonTitle.jsx";
+import TagsList from "./Lesson/TagsList.jsx";
+import LessonPreview from "./Lesson/LessonPreview.jsx";
 
-const variants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-};
-
+/**
+ * The component for each lesson
+ * @param lesson the lesson object
+ */
 export default function Lesson({lesson}) {
 
-    const {previewImgSrc, title, tags, length} = lesson;
+    const {title, tags} = lesson;
     const [hoveredIn, setHoveredIn] = useState(false)
+
+    /**
+     * A function to handle setting the hoveredIn state
+     * @param hovered A boolean to determine whether a component is hovered in or not.
+     */
+    function handleHover(hovered) {
+        setHoveredIn(hovered)
+    }
 
     return (
         <div className={styles.container}>
-            <section
-                className={hoveredIn ? styles.imageContainerHoveredIn : styles.imageContainer}
-                onMouseEnter={() => setHoveredIn(true)}
-                onMouseLeave={() => setHoveredIn(false)}
-            >
-                <img className={styles.previewImage} src={previewImgSrc} alt={title}/>
-                <section className={styles.lessonLengthContainer}>
-                    <p>{length}</p>
-                </section>
-                <motion.img
-                    className={styles.playIcon}
-                    src='src/assets/Lessons/lessonsGallery/play_arrow.svg'
-                    alt='play'
-                    animate={hoveredIn ? 'visible' : 'hidden'}
-                    variants={variants}
-                    transition={{duration: 0.3}}
-                    initial="hidden"
-                />
+            <section className={hoveredIn ? styles.imageContainerHoveredIn : styles.imageContainer}>
+                <LessonPreview lesson={lesson} onHover={handleHover} hoveredIn={hoveredIn} />
             </section>
-            <section className={styles.moduleContainer}>
-                <div className={styles.titleContainer}>
-                    <p className={styles.title}>{title}</p>
-                    <img className={hoveredIn ? styles.forwardIconHoveredIn : styles.forwardIcon}
-                         src='src/assets/general/arrow_forward_black.svg'
-                         alt='enter'
-                         onMouseEnter={() => setHoveredIn(true)}
-                         onMouseLeave={() => setHoveredIn(false)}
-                    />
-                </div>
-                <div className={styles.tagsContainer}>
-                    {tags.map((tag, index) => (
-                        <div key={index} className={styles.tag}>Render</div>
-                    ))}
-                </div>
+            <section className={styles.lessonInfoContainer}>
+                <LessonTitle title={title} onHover={handleHover} hoveredIn={hoveredIn}/>
+                <TagsList tags={tags}/>
             </section>
         </div>
     )

@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    gap: var(--Spacing---Size-Space---80, 8px);
+}
+
+.tag {
+    display: flex;
+    padding: 6px var(--Spacing---Size-Space---120, 12px);
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    background-color: var(--m-3-state-layers-light-primary-opacity-012);
+    color: var(--M3-sys-light-on-surface-variant, #42474E);
+    text-align: center;
+    border-radius: 99px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.1px;
+    transition: all 0.2s ease-in-out;
+}
+
+.tag:hover {
+    background-color: var(--M3-sys-light-surface-container-high);
+    transition: all 0.2s ease-in-out;
+}

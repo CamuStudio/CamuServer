@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    padding: 8px 0;
+    align-items: center;
+    gap: var(--Spacing---Size-Space---80, 8px);
+}
+
+.title {
+    color: var(--M3-sys-light-on-surface, #181C20);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px; /* 133.333% */
+}
+
+.forwardIcon {
+    transform: rotate(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.forwardIconHoveredIn {
+    transform: rotate(-45deg);
+    transition: all 0.3s ease-in-out;
+}
