@@ -1,0 +1,14 @@
+.container {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 64px;
+}
+
+.lessonContainer {
+    display: flex;
+    height: 312px;
+    /*flex: 1 0 0;*/
+}
+

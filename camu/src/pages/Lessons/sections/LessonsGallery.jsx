@@ -2,6 +2,7 @@ import styles from './LessonsGallery.module.css'
 import Lesson from "../../../components/Lessons/Lesson.jsx";
 import {latestLessons, topLatestLesson, defaultCategories, allLessons} from "../../../utils/dummyData.js";
 import SearchBar from "../../../components/Lessons/SearchBar.jsx";
+import LessonsTable from "../../../components/Lessons/Lesson/LessonsTable.jsx";
 
 export default function LessonsGallery() {
     return (
@@ -58,13 +59,7 @@ export default function LessonsGallery() {
                         </ul>
                     </div>
                 </div>
-                <div className={styles.allLessonsTable}>
-                    {allLessons.map((lesson, index) => (
-                        <div key={index} className={styles.lessonContainer}>
-                            <Lesson lesson={lesson}/>
-                        </div>
-                    ))}
-                </div>
+                <LessonsTable lessons={allLessons} />
             </section>
         </div>
     )
