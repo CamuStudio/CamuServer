@@ -30,11 +30,13 @@
   --Schemes-Inverse-Primary: #9CCBFB;
   --Schemes-Primary-Container: #CFE5FF;
   --Schemes-On-Primary: #FFF;
+  --Schemes-On-Surface-Variant: #42474E;
   --Schemes-Surface: #F7F9FF;
   --Schemes-Secondary-Container: #B4EBFF;
   --Schemes-Tertiary-Container: #FFDF96;
   --Shade-Color-700: #6D7173;
-  --m-3-state-layers-light-primary-opacity-012: rgba(48, 98, 140, 0.12)
+  --m-3-state-layers-light-primary-opacity-012: rgba(48, 98, 140, 0.12);
+  --m-3-state-layers-light-on-surface-variant-opacity-012: rgba(73, 69, 79, 0.12);
 }
 
 /**
