@@ -1,0 +1,27 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+.container h4 {
+    color: #1E1E1E;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 36px; /* 128.571% */
+    letter-spacing: -0.56px;
+}
+
+.searchBarContainer {
+    display: flex;
+    width: 280px;
+    min-width: var(--Spacing---Section-Padding-Large, 120px);
+    padding: var(--Spacing---Size-Space---80, 8px) var(--Spacing---Size-Space---160, 16px);
+    align-items: center;
+    gap: 12px;
+    border-radius: var(--Corner-radius-Small, 12px);
+    border: var(--Spacing---Size-Space---0, 1px) solid rgba(28, 27, 31, 0.40);
+}
