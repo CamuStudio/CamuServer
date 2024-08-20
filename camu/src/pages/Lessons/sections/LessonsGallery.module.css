@@ -5,6 +5,7 @@
     align-items: center;
     gap: var(--Spacing---Section-Padding-Large, 120px);
     align-self: stretch;
+    padding-bottom: var(--Spacing---Section-Padding-Large, 120px);
     min-height: 100vh;
 }
 
