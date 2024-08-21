@@ -1,11 +1,11 @@
-import styles from "./CategoryList.module.css";
+import styles from "./LessonCategoryList.module.css";
 
 /**
  * A component that displays all retrieved categories
  * @param categories All the categories in the list
  * @constructor
  */
-export default function CategoryList({categories}) {
+export default function LessonCategoryList({categories}) {
     return (
         <div className={styles.categoryContainer}>
             <p>Category</p>

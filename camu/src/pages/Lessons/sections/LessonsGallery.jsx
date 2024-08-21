@@ -1,7 +1,7 @@
 import styles from './LessonsGallery.module.css'
 import {latestLessons, defaultCategories, allLessons} from "../../../utils/dummyData.js";
-import LessonsTable from "../../../components/Lessons/Lesson/LessonsTable.jsx";
-import CategoryList from "../../../components/Lessons/Lesson/CategoryList.jsx";
+import LessonsTable from "../../../components/Lessons/Lesson/LessonTable/LessonsTable.jsx";
+import LessonCategoryList from "../../../components/Lessons/Lesson/LessonCategoryList/LessonCategoryList.jsx";
 import TopRow from "../../../components/Lessons/Lesson/TopRow/TopRow.jsx";
 import LatestLesson from "../../../components/Lessons/Lesson/LatestLesson/LatestLesson.jsx";
 
@@ -16,7 +16,7 @@ export default function LessonsGallery() {
             <section className={styles.allLessonsContainer}>
                 <div className={styles.topContainer}>
                     <TopRow />
-                    <CategoryList categories={defaultCategories} />
+                    <LessonCategoryList categories={defaultCategories} />
                 </div>
                 <LessonsTable lessons={allLessons} />
             </section>

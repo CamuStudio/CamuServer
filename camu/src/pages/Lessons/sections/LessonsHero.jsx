@@ -1,5 +1,5 @@
 import styles from './LessonsHero.module.css';
-import SearchBar from "../../../components/Lessons/SearchBar.jsx";
+import SearchBar from "../../../components/Lessons/Lesson/SearchBar/SearchBar.jsx";
 
 export default function LessonsHero() {
     return (

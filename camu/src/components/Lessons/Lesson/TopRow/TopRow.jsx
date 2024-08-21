@@ -1,5 +1,5 @@
 import styles from './TopRow.module.css'
-import SearchBar from "../../SearchBar.jsx";
+import SearchBar from "../SearchBar/SearchBar.jsx";
 
 /**
  * A component that consists of the top row of "All Lessons" section

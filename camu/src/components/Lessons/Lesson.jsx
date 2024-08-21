@@ -1,8 +1,8 @@
 import styles from './Lesson.module.css';
 import {useState} from "react";
-import LessonTitle from "./Lesson/LessonTitle.jsx";
-import TagsList from "./Lesson/TagsList.jsx";
-import LessonPreview from "./Lesson/LessonPreview.jsx";
+import LessonTitle from "./Lesson/LessonTitle/LessonTitle.jsx";
+import LessonTagsList from "./Lesson/LessonTagsList/LessonTagsList.jsx";
+import LessonPreview from "./Lesson/LessonPreview/LessonPreview.jsx";
 
 /**
  * The component for each lesson
@@ -28,7 +28,7 @@ export default function Lesson({lesson}) {
             </section>
             <section className={styles.lessonInfoContainer}>
                 <LessonTitle title={title} onHover={handleHover} hoveredIn={hoveredIn}/>
-                <TagsList tags={tags}/>
+                <LessonTagsList tags={tags}/>
             </section>
         </div>
     )

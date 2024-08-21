@@ -1,5 +1,5 @@
 import styles from './LessonsTable.module.css'
-import Lesson from "../../../components/Lessons/Lesson.jsx";
+import Lesson from "../../Lesson.jsx";
 
 /**
  * A component that displays all retrieved lessons in a table
