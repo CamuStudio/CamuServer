@@ -1,5 +1,6 @@
 import styles from './HeroPage.module.css'
 import SolidButton from "../../components/general/SolidButton.jsx";
+import {forwardRef} from "react";
 
 const tutorAvatars = [
     "../src/assets/tutors/tina.png",
@@ -30,9 +31,9 @@ const brandImages = [
 /**
  * The hero component containing text, contact button, and a hero image
  */
-export default function Hero() {
+export default forwardRef(function Hero(props, ref) {
     return (
-        <main className={styles.wrapper}>
+        <main className={styles.wrapper} ref={ref}>
             <div className={styles.container}>
                 <div className={styles.heroContainer}>
                     <section className={styles.tutorsContainer}>
@@ -81,4 +82,4 @@ export default function Hero() {
             </div>
         </main>
     )
-}
+})

@@ -6,7 +6,7 @@ const navSelections = [
     {'name': 'Home', 'linkTo': '/',},
     {'name': 'Lessons', 'linkTo': '/lesson',},
     {'name': 'Blog', 'linkTo': '/blog',},
-    {'name': 'Contact us', 'linkTo': '/',}
+    {'name': 'Contact us'}
 ];
 
 const NavBar = function({onScrollToSection, defaultSelection}) {
@@ -20,7 +20,20 @@ const NavBar = function({onScrollToSection, defaultSelection}) {
             </div>
             <div className={styles.buttons}>
                 {navSelections.map((selection, i) => (
-                    <Link key={i} to={selection.linkTo} className={styles.link}>
+                    selection.linkTo  ? (
+                        <Link key={i} to={selection.linkTo} className={styles.link}>
+                            <button key={i}
+                                    className={styles.button}
+                                    style={selection.name === selectedButton ? {backgroundColor: 'var(--m-3-state-layers-light-primary-opacity-012)'} : {}}
+                                    onClick={() => {
+                                        setSelectedButton(selection.name)
+                                        onScrollToSection(selection.name)
+                                    }}
+                            >
+                                {selection.name}
+                            </button>
+                        </Link>
+                    ) : (
                         <button key={i}
                                 className={styles.button}
                                 style={selection.name === selectedButton ? {backgroundColor: 'var(--m-3-state-layers-light-primary-opacity-012)'} : {}}
@@ -31,7 +44,7 @@ const NavBar = function({onScrollToSection, defaultSelection}) {
                         >
                             {selection.name}
                         </button>
-                    </Link>
+                    )
                 ))}
             </div>
         </nav>
