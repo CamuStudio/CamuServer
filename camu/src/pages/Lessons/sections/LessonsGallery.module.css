@@ -5,11 +5,12 @@
     align-items: center;
     gap: var(--Spacing---Section-Padding-Large, 120px);
     align-self: stretch;
+    padding-top: var(--Spacing---Section-Padding-Large, 120px);
     padding-bottom: var(--Spacing---Section-Padding-Large, 120px);
     min-height: 100vh;
 }
 
-.latestVideosContainer {
+.latestLessonsContainer {
     display: flex;
     width: 1120px;
     flex-direction: column;
@@ -17,7 +18,7 @@
     gap: var(--Spacing---Size-Space---640, 64px);
 }
 
-.latestVideosContainer h4 {
+.latestLessonsContainer h4 {
     color: #1E1E1E;
     text-align: center;
     font-size: 28px;
@@ -26,7 +27,7 @@
     letter-spacing: -0.56px;
 }
 
-.latestVideoContainer {
+.latestLessonContainer {
     display: flex;
     width: 100%;
     gap: 24px;
