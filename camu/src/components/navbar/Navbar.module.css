@@ -3,7 +3,8 @@
     position: fixed;
     z-index: 10;
     top: 0;
-    left: 120px;
+    left: 0;
+    transform: translate(calc(50vw - 50%));
     display: flex;
     width: 1200px;
     justify-content: space-between;
