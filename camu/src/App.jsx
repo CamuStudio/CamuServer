@@ -54,7 +54,7 @@ function App() {
 
     return (
         <div className="wrapper">
-            <ScrollToTop />
+            {/*<ScrollToTop />*/}
             <NavBar onScrollToSection={handleScrollToSection} defaultSelection='Home'/>
             <HeroPage ref={home} />
             <ServicePage ref={service} />
