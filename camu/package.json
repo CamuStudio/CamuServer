@@ -10,11 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "add": "^2.0.6",
     "classnames": "^2.5.1",
     "framer-motion": "^11.3.27",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.26.1"
+    "react-router-dom": "^6.26.1",
+    "yarn": "^1.22.22"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",

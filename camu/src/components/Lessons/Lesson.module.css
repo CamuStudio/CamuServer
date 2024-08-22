@@ -1,0 +1,65 @@
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.imageContainer, .imageContainerHoveredIn {
+    display: flex;
+    height: 240px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background: #D9D9D9;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.imageContainerHoveredIn {
+    border-radius: 24px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.40) 100%), #D9D9D9;
+    box-shadow: 2px 4px 24px 4px rgba(45, 49, 53, 0.20);
+    transition: all 0.3s ease-in-out;
+}
+
+.imageContainerHoveredIn:hover {
+    filter: contrast(0.8);
+    transition: all 0.3s ease-in-out;
+}
+
+.lessonInfoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.titleContainer {
+    display: flex;
+    padding: 8px 0;
+    align-items: center;
+    gap: var(--Spacing---Size-Space---80, 8px);
+}
+
+.title {
+    color: var(--M3-sys-light-on-surface, #181C20);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px; /* 133.333% */
+}
+
+.forwardIcon {
+    transform: rotate(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.forwardIconHoveredIn {
+    transform: rotate(-45deg);
+    transition: all 0.3s ease-in-out;
+}
+
+.tagsContainer {
+    display: flex;
+    gap: var(--Spacing---Size-Space---80, 8px);
+}

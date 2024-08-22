@@ -1,11 +1,17 @@
 import styles from "./Navbar.module.css"
 import {useState} from "react";
+import {Link} from "react-router-dom";
 
-const navSelections = ['Home', 'Lessons', 'Blog', 'Contact us'];
+const navSelections = [
+    {'name': 'Home', 'linkTo': '/',},
+    {'name': 'Lessons', 'linkTo': '/lesson',},
+    {'name': 'Blog', 'linkTo': '/blog',},
+    {'name': 'Contact us'}
+];
 
-const NavBar = function({onScrollToSection}) {
+const NavBar = function({onScrollToSection, defaultSelection}) {
 
-    const [selectedButton, setSelectedButton] = useState('Home');
+    const [selectedButton, setSelectedButton] = useState(defaultSelection);
 
     return (
         <nav className={styles.navbar}>
@@ -14,16 +20,31 @@ const NavBar = function({onScrollToSection}) {
             </div>
             <div className={styles.buttons}>
                 {navSelections.map((selection, i) => (
-                    <button key={i}
-                            className={styles.button}
-                            style={selection === selectedButton ? {backgroundColor: 'var(--m-3-state-layers-light-primary-opacity-012)'} : {}}
-                            onClick={() => {
-                                setSelectedButton(selection)
-                                onScrollToSection(selection)
-                            }}
-                    >
-                        {selection}
-                    </button>
+                    selection.linkTo  ? (
+                        <Link key={i} to={selection.linkTo} className={styles.link}>
+                            <button key={i}
+                                    className={styles.button}
+                                    style={selection.name === selectedButton ? {backgroundColor: 'var(--m-3-state-layers-light-primary-opacity-012)'} : {}}
+                                    onClick={() => {
+                                        setSelectedButton(selection.name)
+                                        onScrollToSection(selection.name)
+                                    }}
+                            >
+                                {selection.name}
+                            </button>
+                        </Link>
+                    ) : (
+                        <button key={i}
+                                className={styles.button}
+                                style={selection.name === selectedButton ? {backgroundColor: 'var(--m-3-state-layers-light-primary-opacity-012)'} : {}}
+                                onClick={() => {
+                                    setSelectedButton(selection.name)
+                                    onScrollToSection(selection.name)
+                                }}
+                        >
+                            {selection.name}
+                        </button>
+                    )
                 ))}
             </div>
         </nav>

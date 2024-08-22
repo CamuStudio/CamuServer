@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.previewImage {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.lessonLengthContainer {
+    display: flex;
+    padding: var(--Spacing---Size-Space---40, 4px) var(--Spacing---Size-Space---80, 8px);
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    border-radius: var(--Spacing---Size-Space---120, 12px);
+    background: #595959;
+}
+
+.lessonLengthContainer p {
+    color: var(--Main-goten, #FFF);
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+}
+
+.playIcon {
+    position: absolute;
+    top: calc(50% - 23px);
+    left: calc(50% - 18px);
+    flex-shrink: 0;
+    fill: rgba(227, 243, 252, 0.60);
+    opacity: 0;
+}

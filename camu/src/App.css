@@ -24,16 +24,19 @@
   --M3-sys-light-on-surface: #181C20;
   --M3-sys-light-on-secondary-container: #001F27;
   --M3-sys-light-on-surface-variant: #42474E;
+  --M3-sys-light-surface-container-high: #F1F3F9;
   --M3-sys-light-surface-container-highest: #FCFCFF;
   --Main-goten: white;
   --Schemes-Inverse-Primary: #9CCBFB;
   --Schemes-Primary-Container: #CFE5FF;
   --Schemes-On-Primary: #FFF;
+  --Schemes-On-Surface-Variant: #42474E;
   --Schemes-Surface: #F7F9FF;
   --Schemes-Secondary-Container: #B4EBFF;
   --Schemes-Tertiary-Container: #FFDF96;
   --Shade-Color-700: #6D7173;
-  --m-3-state-layers-light-primary-opacity-012: rgba(48, 98, 140, 0.12)
+  --m-3-state-layers-light-primary-opacity-012: rgba(48, 98, 140, 0.12);
+  --m-3-state-layers-light-on-surface-variant-opacity-012: rgba(73, 69, 79, 0.12);
 }
 
 /**
@@ -52,6 +55,7 @@
   --Spacing---Size-Space---240: 24px;
   --Spacing---Size-Space---320: 32px;
   --Spacing---Size-Space---480: 48px;
+  --Spacing---Size-Space---560: 56px;
   --Spacing---Size-Space---640: 64px;
 }
 
