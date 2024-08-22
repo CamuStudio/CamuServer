@@ -14,6 +14,13 @@ img
   box-sizing: border-box;
 }
 
+/**
+  The width of the page is set to 1440px at the moment,
+  Will be updated after the UI of different screen widths are updated.
+ */
 body {
+  width: 1440px;
+  max-width: 1440px;
+  margin: 0 auto;
   overflow-x: hidden;
 }
