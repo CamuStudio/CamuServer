@@ -11,7 +11,7 @@ export default function LessonTitle({ title, onHover, hoveredIn }) {
         <div className={styles.container}>
             <p className={styles.title}>{title}</p>
             <img className={hoveredIn ? styles.forwardIconHoveredIn : styles.forwardIcon}
-                 src='../../../../assets/general/arrow_forward_black.svg'
+                 src='src/assets/general/arrow_forward_black.svg'
                  alt='enter'
                  onMouseEnter={() => onHover(true)}
                  onMouseLeave={() => onHover(false)}
