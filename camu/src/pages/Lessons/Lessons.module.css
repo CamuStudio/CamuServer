@@ -5,3 +5,12 @@
     position: relative;
     background-color: #F5F7FA;
 }
+
+@media only screen and (max-width: 390px) {
+    .wrapper {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #FFF;
+    }
+}

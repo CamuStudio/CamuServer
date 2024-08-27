@@ -74,3 +74,15 @@
     width: 30%;
     justify-content: center;
 }
+
+@media only screen and (max-width: 390px) {
+    .container {
+        display: flex;
+        max-width: 480px;
+        padding: var(--Spacing---Section-Padding-Medium, 100px) 16px 0 16px;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--Spacing---Size-Space---240, 24px);
+        align-self: stretch;
+    }
+}
